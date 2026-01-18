@@ -22,7 +22,7 @@ The dataset has 99 observations from service providers between 2018 and 2025.
 In addition to the results of the survey information, the data also includes information about time needed to fill in the each element of the online survey.
 
 # Privacy
-The survey data has been anonymised. Service provider names have been removed. Country names have also been removed to avoid making inferences about possible service providers. 
+The survey data has been anonymised. Service provider names have been anonymised. Country names have also been removed to avoid making inferences about possible service providers. Individual countries have been given a number from a randomised list.
 
 # Analysis aims
 The analysis aims to identify trends in service provider management practices. 
