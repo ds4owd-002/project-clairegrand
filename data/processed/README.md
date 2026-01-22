@@ -18,7 +18,7 @@
 4.  Geographic location of data collection: global
 
 5.  Information about funding sources that supported the collection of
-    the data: InWASH is a tool developed by the Water Integrity Network with support from the Inter-American Development Bank and Sida with input and support from pilot service providers and the Consortium for Water Integrity in Latin America (SIWI, now IVL, and cewas) 
+    the data: InWASH is a tool developed by the Water Integrity Network with input and support from pilot service providers and the Consortium for Water Integrity in Latin America (SIWI, now IVL, and cewas). The Inter-American Development Bank provided support and funding for the development of InWASH and utility assessment tools. WIN also received support from Sida.   
 
 ## Sharing / access information
 
@@ -34,7 +34,7 @@
 
 ## Methodological information
 
-1.  Description of methods used for collection/generation of data: Data was collected via an online survey or offline survey checked by a WIN expert or consultant.
+1.  Description of methods used for collection/generation of data: Data was collected via an online survey, or offline survey checked by a WIN expert or consultant.
 
 2.  Methods for processing the data: Data collected from an early pilot version of the tool was mapped to the final indicators. Data was anonymised. 
 
