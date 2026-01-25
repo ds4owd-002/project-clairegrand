@@ -1,0 +1,27 @@
+﻿variable_name,description
+on_off,Survey was taken online or offline. Offline surveys were taken in a supported InWASH application or as part of pilot applications of integrity assessment.
+id,Unique identifer of survey entry.
+date_submitted,Date survey was completed and submitted online or recorded offline.
+last_page,"Online survey had 6 pages to complete, 1 for each principle and 1 for final information and contact info. Offline surveys were marked as 6 as they are complete."
+language,Language survey was taken in.
+date_started,Date survey was launched online. NA for offline surveys
+date_last_act,Date last information was entered in survey by the user. 
+irm11,Score for Indicator 1.1 on integrity leadership (between 1-5)
+irm12,Score for Indicator 1.2 on code of conduct (between 1-5)
+irm21,Score for Indicator 2.1 on integrity risk assessment  (between 1-5)
+irm31,Score for Indicator 3.1 on conflicts of interest (between 1-5)
+irm32,Score for Indicator 3.2 on whistleblowing (between 1-5)
+irm33,Score for Indicator 3.3 on recruitment processes  (between 1-5)
+irm34,Score for Indicator 3.4 on procurement (between 1-5)
+irm35,Score for Indicator 3.5 on code of conduct (between 1-5)
+irm36,Score for Indicator 3.6 on participation (between 1-5)
+irm37,Score for Indicator 3.7 on financial management (between 1-5)
+irm41,Score for Indicator 4.1 on disciplinary action against staff (between 1-5)
+irm42,Score for Indicator 2.1 on disciplinary action against contractors  (between 1-5)
+irm51,Score for Indicator 1.1 on integrity risk monitoring (between 1-5)
+irm52,Score for Indicator 1.2 on integrity risk management function review (between 1-5)
+irm53,Score for Indicator 2.1 on responsiveness to external accountability mechanisms  (between 1-5)
+utility_code,Code identifying each responding service provider or survey user.
+utility_type,"Primary model of service provider - public, private or mixed."
+country_id,Randomly generated country code.
+region,Region of service provider or survey user.

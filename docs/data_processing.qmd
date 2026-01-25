@@ -73,4 +73,12 @@ ia_short_notempty <- ia_shortdates_shortscores |>
 
 count(ia_short_notempty)
 
+head(ia_short_notempty)
+
+```
+
+write to processed
+
+```{r}
+
 ```
