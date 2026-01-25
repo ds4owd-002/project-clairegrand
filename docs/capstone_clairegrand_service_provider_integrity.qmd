@@ -1,0 +1,80 @@
+---
+title: "Integrity practices of global water service providers"
+subtitle: "A review of InWASH integrity assessment data"
+author: "Claire Grandadam"
+affiliation: "Water Integrity Network"
+date: "January 2026"
+format:
+  html:
+    embed-resources: true
+    toc: true
+    toc-depth: 2
+    toc-title: "Contents"
+execute:
+  warning: false
+editor_options:
+  chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+To reach national policy objectives for water and sanitation service
+delivery and SDG6, water service providers globally must increase
+service coverage and service quality in the face of growing challenges
+related to financing, population growth, and climate change. To enable
+these evolutions, there is high interest, particularly from
+policy-makers, regulators, and sector analysts, in understanding the
+drivers of performance of service providers. National and global utility
+benchmarking processes have been used widely for this, to assess the way
+service providers operate, and to orient sector reforms.
+
+Water sector utility benchmarking is now evolving in part in response to
+two developments:
+
+-   First, the recognition that performance is affected by governance
+    issues and corruption, and the related evidence that anti-corruption
+    and integrity management can support utility performance
+    (Barreto-Dillon, et al., 2018; WIN, 2021; IDB, 2024).
+
+-   Second, growing criticism of the limits and bias in major utility
+    benchmarking tools focusing primarily on efficiency, to the
+    detriment of distributional equity (Bhatt, 2024).
+
+There is a need for better tools that can support service provider
+performance for integrity, equity, sustainability, and resilience. Local
+context highly influences which practices are possible and effective for
+different utilities. Still, there are some indications that there are
+patterns in how good governance and integrity practices are implemented
+in organisations in the water and sanitation sectors and that
+benchmarking can be useful.
+
+Major utility benchmarking tools such as Aquarating and NewIBnet
+recently introduced new process indicators focusing on management
+practices (in 2022 and 2023 respectively). There is however limited data
+available on their use. The Water Integrity Network (WIN) also developed
+a set of indicators to assess integrity management practices of service
+providers and support planning for integrity risk management.
+
+This analysis aims to examine anonymised data from applications of the
+Water Integrity Network tool since 2018, to understand patterns of use,
+possible resistance and challenges to assessing integrity practices, and
+trends in integrity management practices.
+
+# Methods
+
+WIN developed integrity indicators for utilities from 2018 onwards with
+support from the Inter-American Development Bank and in partnership with
+the Consortium for Water Integrity in Latin America (with SIWI and
+cewas). This set of indicators is sometimes referred to as the Utility
+Integrity Assessment. It is part of WIN's InWASH integrity management
+toolbox for water and sanitation service providers and it is also
+available separately as an online survey.
+
+# Results
+
+# Conclusions
+
+# References
