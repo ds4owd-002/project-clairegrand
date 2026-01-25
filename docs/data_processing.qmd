@@ -80,5 +80,9 @@ head(ia_short_notempty)
 write to processed
 
 ```{r}
+processed_data <- ia_short_notempty |>
+  select(on_off, id, date_submitted, last_page, language, date_started, date_last_act, irm11_short, irm12_short, irm21_short, irm31_short, irm32_short, irm33_short, irm34_short, irm35_short, irm36_short, irm37_short, irm41_short, irm42_short, irm51_short, irm52_short, irm53_short, utility_code, utility_type, country_id, region)
 
+write_csv(processed_data,
+          here::here("data/processed/processed-data.csv"))
 ```
