@@ -8,21 +8,23 @@ editor:
 
 ## Project description
 
-Review of integrity practices of water and sanitation service providers, using
-an assessment tool and data by the Water Integrity Network. The key
-questions the assessment is aiming to answer are:
+Review of integrity practices of water and sanitation service providers,
+using an assessment tool and data by the Water Integrity Network. The
+key questions the assessment is aiming to answer are:
 
-- is there significant variation in the practices of service providers across
-    the world?
+-   is there significant variation in the practices of service providers
+    across the world?
 
-- are there major trends, strengths, and weaknesses?
+-   are there major trends, strengths, and weaknesses?
 
-- are there regional trends?
+-   are there regional trends?
 
-- do scores differ based on the type of utility, the way the the survey was taken, or within utilities (over time or between indivdual survey takers)
+-   do scores differ based on the type of utility, the way the the
+    survey was taken, or within utilities (over time or between
+    indivdual survey takers)
 
-- what is the impact of local regulatory requirements on survey results?
-
+-   what is the impact of local regulatory requirements on survey
+    results?
 
 ```{r}
 library(tidyverse)
@@ -33,6 +35,3 @@ library(tidyverse)
 read_csv(here::here("data/raw/results_survey669928_on-off_anon.csv"))
 
 ```
-
-
-

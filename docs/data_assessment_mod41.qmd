@@ -13,16 +13,17 @@ editor_options:
 ---
 
 # Dataset name and source
-Integrity assessments of service providers worldwide
-Data from the InWASH utility assessment methodology by the Water Integrity Network (WIN)
+
+Integrity assessments of service providers worldwide Data from the InWASH utility assessment methodology by the Water Integrity Network (WIN)
 
 # Description
-Data includes service providers responses to a survey with 15 indicators grouped under 5 integrity principles for corporate governance. A portion of these responses were provided independently by service providers online, sometimes anonymously. A portion of these responses were provided by service providers with support from and validation by an assigned WIN or WIN-related expert, either in a pilot version of the survey which was mapped to the 15 final indicators, or in the final format of the survey. 
-The dataset has 99 observations from service providers between 2018 and 2025. 
-In addition to the results of the survey information, the data also includes information about time needed to fill in the each element of the online survey.
+
+Data includes service providers responses to a survey with 15 indicators grouped under 5 integrity principles for corporate governance. A portion of these responses were provided independently by service providers online, sometimes anonymously. A portion of these responses were provided by service providers with support from and validation by an assigned WIN or WIN-related expert, either in a pilot version of the survey which was mapped to the 15 final indicators, or in the final format of the survey. The dataset has 99 observations from service providers between 2018 and 2025. In addition to the results of the survey information, the data also includes information about time needed to fill in the each element of the online survey.
 
 # Privacy
+
 The survey data has been anonymised. Service provider names have been anonymised. Country names have also been removed to avoid making inferences about possible service providers. Individual countries have been given a number from a randomised list.
 
 # Analysis aims
-The analysis aims to identify trends in service provider management practices. 
+
+The analysis aims to identify trends in service provider management practices related to integrity.
