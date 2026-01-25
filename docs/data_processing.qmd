@@ -3,7 +3,7 @@ title: "data_processing"
 format: html
 ---
 
-load and check
+loading and check
 
 ```{r}
 
@@ -27,11 +27,50 @@ ia_shortdates <- raw_ia_data |> mutate(
 
 ```
 
-consistency check - 5 unique values possible for each indicator variable
+consistency check - 5 unique values possible for each indicator variable (+ empty) and these values go together.
 
 ```{r}
 indicators <- raw_ia_data |> select(irm11:irm53)
 
-indicators |> distinct(irm11)
+for (i in seq_along(indicators)) { 
+  print(names(indicators)[i])
+  print(unique(indicators[[i]]))
+  cat("\n")
+}
+```
+
+short values for each score
+
+```{r}
+ia_shortdates_shortscores <- ia_shortdates |> 
+  mutate (
+    irm11_short = str_sub(irm11, 7, 7),
+    irm12_short = str_sub(irm12, 7, 7),
+    irm21_short = str_sub(irm21, 7, 7),
+    irm31_short = str_sub(irm31, 7, 7),
+    irm32_short = str_sub(irm32, 7, 7),
+    irm33_short = str_sub(irm33, 7, 7),
+    irm34_short = str_sub(irm34, 7, 7),
+    irm35_short = str_sub(irm35, 7, 7),
+    irm36_short = str_sub(irm36, 7, 7),
+    irm37_short = str_sub(irm37, 7, 7),
+    irm41_short = str_sub(irm41, 7, 7),
+    irm42_short = str_sub(irm42, 7, 7),
+    irm51_short = str_sub(irm51, 7, 7),
+    irm52_short = str_sub(irm52, 7, 7),
+    irm53_short = str_sub(irm53, 7, 7))
+  
+
+print(ia_shortdates_shortscores)
+```
+
+filter empty surveys
+
+```{r}
+
+ia_short_notempty <- ia_shortdates_shortscores |> 
+  filter(last_page != 0)
+
+count(ia_short_notempty)
 
 ```
