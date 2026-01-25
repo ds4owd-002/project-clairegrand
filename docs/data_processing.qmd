@@ -3,51 +3,35 @@ title: "data_processing"
 format: html
 ---
 
+load and check
+
 ```{r}
 
 library(tidyverse)
-
-raw_ia_data <- read_csv(here::here("data/raw/results_survey669928_on-off_anon.csv"))
-glimpse(raw_ia_data)
-
 library(dplyr)
 
+raw_ia_data <- read_csv(here::here("data/raw/results_survey669928_on-off_anon.csv"))
+
+glimpse(raw_ia_data)
 
 ```
 
-shorter variable names
+field formats
 
 ```{r}
-ia_data_shortnames <- raw_ia_data |> 
-  rename(
-    on_off = `on or off`,
-    response_id = `Response ID`,
-    date_submitted = `Date submitted`,
-    last_page = `Last page` ,
-    language = `Start language`,
-    date_started = `Date started`,
-    date_last_act = `Date last action`,
-    irm11 = `Indicator IRM1.1: Integrity leadership  What role does the Utility’s senior management play in integrity management?`,
-    irm12 = `Indicator IRM1.2: Code of conduct  How effectively does the Utility’s senior management enforce a code of conduct (or a similar guiding document) to align staff behaviour and practices with the organisation’s integrity standards?`,
-    irm21 = `Indicator IRM2.1: Integrity risk assessment  How does the Utility conduct integrity risk assessments, including for corruption and fraud risks?`,
-    irm31 = `Indicator IRM3.1: Conflicts of interest  How does the Utility manage conflicts of interest?`,
-    irm32 = `Indicator IRM3.2: Whistleblowing policy  How does the Utility protect whistle-blowers?`,
-    irm33 = `Indicator IRM3.3: Merit based recruitment and selection policy  To what extent is recruitment at the Utility merit based? `,
-    irm34 = `Indicator IRM3.4: Procurement integrity controls  How does the Utility manage integrity risks in procurement?`,
-    irm35 = `Indicator IRM3.5: Transparency and disclosure  What transparency and disclosure mechanisms are in place at the Utility?`,
-    irm36 = `Indicator IRM3.6: Feedback and participation  How does the Utility ensure user participation and address complaints?`,
-    irm37 = `Indicator IRM3.7: Management and financial controls  How does the Utility use management and financial controls to prevent integrity malpractice?`,
-    irm41 = `Indicator IRM4.1: Disciplinary action for integrity violation  What disciplinary actions does the Utility take against staff who commit integrity malpractices?`,
-    irm42 = `Indicator IRM4.2: Sanctions against contractors for non-compliance   How does the Utility sanction contractors for non-compliance with anti-corruption rules?`,
-    irm51 = `Indicator IRM5.1: Monitoring integrity risks  How does the Utility monitor integrity risks?`,
-    irm52 = `Indicator IRM5.2: Review of integrity risk management function   How does the Utility ascertain whether the integrity risk management is functioning effectively?`,
-    irm53 = `Indicator IRM5.3: Responsiveness to external accountability mechanisms   To what extent is the Utility responsive to external accountability mechanisms?`,
-    utility_type = `Utility type`,
-    country_id = `Country ID`,
-    region = `Region:`
-  )
+
+ia_shortdates <- raw_ia_data |> mutate(
+  date_submitted = as_date(date_submitted),
+  date_started = as_date(date_started),
+  date_last_act = as_date(date_last_act))
+
 ```
 
-consistency check
+consistency check - 5 unique values possible for each indicator variable
 
-5 uniques values possible for each indicator variable
+```{r}
+indicators <- raw_ia_data |> select(irm11:irm53)
+
+indicators |> distinct(irm11)
+
+```
