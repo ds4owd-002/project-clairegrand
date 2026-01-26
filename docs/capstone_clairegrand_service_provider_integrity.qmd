@@ -155,11 +155,31 @@ The analysis looks at:
     survey was taken, or within utilities (over time or between
     individual survey takers).
 
-```{r}
-  echo = TRUE}
+```{r  echo = TRUE}
 
 library(tidyverse)
-read_csv(here::here("data/raw/results_survey669928_on-off_anon.csv"))
+library(gt)
+library(gtsummary)
+library(knitr)
+library(DT)
+
+ia_data <- read_csv(here::here("data/processed/processed_data.csv"))
+
+glimpse(ia_data)
+
+ia_ordered_regions <- ia_data |> mutate(
+  region = factor(region, levels = c("Eastern and Southern Africa", "Middle East and North Africa", "South Asia", "Latin America and Caribbean", "Western Europe", "UNKNOWN" ))
+)
+
+tbl_data_overview <- ia_ordered_regions |> 
+    group_by(region) |> summarise(
+      online_count = sum(on_off == "online", na.rm = TRUE),
+      offline_count = sum(on_off == "offline", na.rm = TRUE),
+      completed = sum(last_page > 4)
+  )
+
+tbl_data_overview
+
 ```
 
 # Results
