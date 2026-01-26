@@ -24,39 +24,35 @@ editor:
 To reach national policy objectives for water and sanitation service
 delivery and SDG6, water service providers globally must increase
 service coverage and service quality in the face of growing challenges
-related to financing, population growth, and climate change. To enable
-these evolutions, there is high interest, particularly from
-policy-makers, regulators, and sector analysts, in understanding the
-drivers of performance of service providers. National and global utility
-benchmarking processes have been used widely for this, to assess the way
-service providers operate, and to orient sector reforms.
+related to financing, population growth, and climate change. This has
+spurred high interest in understanding the drivers of service provider
+performance, particularly from service provider managers, policy-makers,
+regulators, banks and other funders, as well as sector analysts.
 
-Water sector utility benchmarking is now evolving in part in response to
-two developments:
+National and global utility benchmarking processes have been used widely
+for such analysis, to assess the way service providers operate, and to
+orient sector reforms. The most common benchmarking tools tend to focus
+on service quality, financial management, and operational efficiency.
+Recently, water sector utility benchmarking tools have also been
+evolving in part in response to two developments:
 
 -   First, the recognition that performance is affected by governance
     issues and corruption, and the related evidence that anti-corruption
     and integrity management can support utility performance
-    (Barreto-Dillon, et al., 2018; WIN, 2021; IDB, 2024).
+    (Barreto-Dillon, et al., 2018; WIN, 2021; IDB, 2024). There is a
+    need for better tools that can support service providers striving
+    for integrity, equity, sustainability, and resilience.
 
 -   Second, growing criticism of the limits and bias in major utility
-    benchmarking tools focusing primarily on efficiency, to the
+    benchmarking tools that have primarily focused on efficiency, to the
     detriment of distributional equity (Bhatt, 2024).
-
-There is a need for better tools that can support service provider
-performance for integrity, equity, sustainability, and resilience. Local
-context highly influences which practices are possible and effective for
-different utilities. Still, there are some indications that there are
-patterns in how good governance and integrity practices are implemented
-in organisations in the water and sanitation sectors and that
-benchmarking can be useful.
 
 Major utility benchmarking tools such as Aquarating and NewIBnet
 recently introduced new process indicators focusing on management
 practices (in 2022 and 2023 respectively). There is however limited data
 available on their use. The Water Integrity Network (WIN) also developed
 a set of indicators to assess integrity management practices of service
-providers and support planning for integrity risk management.
+providers.
 
 This analysis aims to examine anonymised data from applications of the
 Water Integrity Network tool since 2018, to understand patterns of use,
@@ -70,8 +66,101 @@ support from the Inter-American Development Bank and in partnership with
 the Consortium for Water Integrity in Latin America (with SIWI and
 cewas). This set of indicators is sometimes referred to as the Utility
 Integrity Assessment. It is part of WIN's InWASH integrity management
-toolbox for water and sanitation service providers and it is also
-available separately as an online survey.
+toolbox for water and sanitation service providers, an intensive process
+for prioritising and managing the integrity risks service providers face
+in their daily operations. The tool is also available separately as an
+online survey at <https://www.waterintegritynetwork.net/inwash>.
+
+Local context and the local regulatory environment highly influence
+which governance and integrity practices are possible and effective for
+different utilities. Still, early pilots and assessment by WIN indicated
+that there are patterns in how good governance and integrity practices
+are implemented in organisations in the water and sanitation sectors
+globally and that benchmarking can be useful for urban service providers
+of a certain size (very small rural service providers tend to not yet
+have the capacity and systems for the governance practices described in
+the tool). The tool is based on these observations.
+
+The Utility Integrity Assessment was designed as a short survey
+examining 15 indicators categorised under 5 integrity principles:
+
+1.  Tone at the top (2 indicators: on leadership and on codes of
+    conduct);
+
+2.  Integrity risk assessment (1 indicator);
+
+3.  Integrity controls (7 indicators, on conflicts of interest,
+    whistleblowing, recruitment, procurement, disclosure, participation,
+    and financial management);
+
+4.  Corrective action (2 indicators, on sanctions for staff and on
+    sanctions for contractors);
+
+5.  Monitoring (3 indicators, on risk monitoring, review of risk
+    management functions, and responsiveness to external accountability
+    mechanisms).
+
+Service providers use the tool for a self-assessment. They score
+themselves for each indicator on a scale of 1 to 5, based on clear
+descriptions of the practices that they would have in place for each
+score. For example, the second indicator examines how effectively a
+service provider sets integrity standards and enforces them through a
+code of conduct or similar document. The 5 possible scores are:
+
+-   **Score 1:** There is no written code of conduct (or similar
+    document) outlining what the Utility expects from staff regarding
+    values, rules, standards, and principles.
+
+-   **Score 2:** Between 1 and 3.
+
+-   **Score 3:** The code of conduct (or a similar document) contains
+    most of the following elements (some elements may be missing): an
+    ethical framework for decision making, generic examples of what
+    constitute acceptable and unacceptable behaviour, guidelines on
+    reporting problems anonymously, accountability and disciplinary
+    policies for unethical behaviour, a list of ethics and compliance
+    resources. The code of conduct was not revised in the last 3
+    calendar years. There is evidence that the Utility has organised a
+    training on the code of conduct in the past, but the training is not
+    routinely provided.
+
+-   **Score 4:** Between 3 and 5.
+
+-   **Score 5:** The code of conduct (or a similar document) contains
+    ALL of the elements outlined in Level 3. The code of conduct was
+    revised at most 3 years ago or more recently, after 1) the most
+    recent changes to workplace profiles, including restructuring,
+    relocation, changes in key roles or decision-making processes, or 2)
+    the most recent changes in the external environment, including
+    sector reform, new relevant legislation, changes in government
+    strategies or in contractors’ business practices. Code of conduct
+    training is routinely given to new employees as part of their
+    induction programme.
+
+This analysis looks at available data since 2018, from service providers
+that filled the survey online independently and from service providers
+that participated in an InWASH process and received support and
+validation on the Utility Integrity Assessment from a WIN or partner
+expert or consultant.
+
+The analysis looks at:
+
+-   whether there is significant variation in the practices of service
+    providers across regions,
+
+-   whether there are clear trends, strengths, and weaknesses across
+    indicators and principles,
+
+-   whether scores differ based on the type of utility, the way the the
+    survey was taken, or within utilities (over time or between
+    individual survey takers).
+
+```{r}
+  echo = TRUE}
+
+library(tidyverse)
+read_csv(here::here("data/raw/results_survey669928_on-off_anon.csv"))
+```
 
 # Results
 
