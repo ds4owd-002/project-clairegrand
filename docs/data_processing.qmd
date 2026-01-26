@@ -64,11 +64,31 @@ ia_shortdates_shortscores <- ia_shortdates |>
 print(ia_shortdates_shortscores)
 ```
 
+clean up on_off column, adding version column
+
+```{r}
+
+ia_short_versions <- ia_shortdates_shortscores |> 
+  mutate(version = case_when(
+    on_off == "offline" ~ "current",
+    on_off == "offline - old 1" ~ "pilot 1",
+    on_off == "offline - old 2" ~ "pilot 2",
+    on_off == "offline - old2" ~ "pilot 2",
+    on_off == "online" ~ "current"
+  ))
+
+  
+ia_short_versions_clean <- ia_short_versions |> mutate(on_off = case_when(
+  on_off == "online" ~ "online",
+  TRUE ~ "offline"
+))
+```
+
 filter empty surveys
 
 ```{r}
 
-ia_short_notempty <- ia_shortdates_shortscores |> 
+ia_short_notempty <- ia_short_versions_clean |> 
   filter(last_page != 0)
 
 count(ia_short_notempty)
@@ -81,8 +101,8 @@ write to processed
 
 ```{r}
 processed_data <- ia_short_notempty |>
-  select(on_off, id, date_submitted, last_page, language, date_started, date_last_act, irm11_short, irm12_short, irm21_short, irm31_short, irm32_short, irm33_short, irm34_short, irm35_short, irm36_short, irm37_short, irm41_short, irm42_short, irm51_short, irm52_short, irm53_short, utility_code, utility_type, country_id, region)
+  select(on_off, id, date_submitted, last_page, language, date_started, date_last_act, irm11_short, irm12_short, irm21_short, irm31_short, irm32_short, irm33_short, irm34_short, irm35_short, irm36_short, irm37_short, irm41_short, irm42_short, irm51_short, irm52_short, irm53_short, utility_code, utility_type, country_id, region, version)
 
 write_csv(processed_data,
-          here::here("data/processed/processed-data.csv"))
+          here::here("data/processed/processed_data.csv"))
 ```

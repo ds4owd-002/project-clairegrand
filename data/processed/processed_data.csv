@@ -1,76 +1,76 @@
-on_off,id,date_submitted,last_page,language,date_started,date_last_act,irm11_short,irm12_short,irm21_short,irm31_short,irm32_short,irm33_short,irm34_short,irm35_short,irm36_short,irm37_short,irm41_short,irm42_short,irm51_short,irm52_short,irm53_short,utility_code,utility_type,country_id,region
-online,20,2022-09-20,6,en,2022-09-20,2022-09-20,5,5,5,4,4,3,5,5,4,4,4,5,3,4,4,1,public,252,Eastern and Southern Africa
-online,21,2022-09-20,6,en,2022-09-20,2022-09-20,3,3,1,1,1,4,3,4,5,5,3,4,3,5,5,2,public,252,Eastern and Southern Africa
-online,26,NA,5,en,2022-09-28,2022-09-28,1,1,1,1,1,3,1,2,3,1,2,2,1,2,1,3,public,252,Eastern and Southern Africa
-online,27,NA,4,en,2022-09-29,2022-09-29,4,4,3,4,3,4,4,5,5,4,4,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,29,NA,2,en,2022-09-29,2022-09-29,5,3,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,31,2022-09-30,6,en,2022-09-30,2022-09-30,4,4,5,4,4,4,4,5,5,4,4,4,4,3,5,5,public,252,Eastern and Southern Africa
-online,33,NA,5,es,2022-09-30,2022-09-30,3,2,1,4,4,3,2,2,2,5,1,4,1,4,4,NA,NA,NA,UNKNOWN
-online,43,2022-11-09,6,fr,2022-11-09,2022-11-09,5,4,5,4,5,3,4,3,4,5,4,4,5,5,5,6,confidential,NA,UNKNOWN
-online,47,2022-11-30,6,es,2022-11-30,2022-11-30,5,5,5,5,4,4,5,5,5,5,4,2,5,5,5,7,private,3,Western Europe
-online,54,2022-12-01,6,es,2022-12-01,2022-12-01,5,3,5,5,5,3,5,3,4,5,5,4,4,3,5,7,private,3,Western Europe
-online,49,2022-11-30,6,es,2022-11-30,2022-11-30,5,5,5,5,4,4,5,5,5,5,4,4,5,4,5,8,mixed,3,Western Europe
-online,50,NA,2,es,2022-11-30,2022-11-30,5,5,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,51,2022-11-30,6,es,2022-11-30,2022-11-30,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7,private,3,Western Europe
-online,52,2022-11-30,6,es,2022-11-30,2022-11-30,5,5,5,5,5,4,5,4,5,5,5,1,5,5,5,10,mixed,3,Western Europe
-online,53,2022-11-30,6,es,2022-11-30,2022-11-30,5,5,5,3,3,3,2,2,4,5,3,2,3,2,5,11,private,3,Western Europe
-online,55,2022-12-01,6,es,2022-12-01,2022-12-01,5,5,5,5,5,4,5,5,5,5,5,5,5,5,5,12,private,3,Western Europe
-online,57,NA,2,en,2022-12-01,2022-12-01,1,1,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,58,NA,5,en,2022-12-08,2022-12-08,1,1,2,5,5,4,2,2,3,3,5,3,5,5,5,NA,NA,NA,UNKNOWN
-online,66,NA,1,en,2023-01-24,2023-01-24,1,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,68,NA,5,es,2023-03-29,2023-03-29,1,2,4,2,3,4,5,4,5,5,3,3,4,4,1,NA,NA,NA,UNKNOWN
-online,76,NA,5,en,2023-07-06,2023-07-06,1,5,3,5,4,3,3,4,3,3,3,3,4,3,3,NA,NA,NA,UNKNOWN
-online,80,NA,4,es,2023-08-18,2023-08-18,1,1,1,1,1,1,1,1,1,1,1,1,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,93,NA,4,en,2023-11-23,2023-11-23,3,3,3,3,3,3,3,3,3,3,3,3,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,98,NA,2,es,2023-12-07,2023-12-07,5,2,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,102,2023-12-29,6,es,2023-12-29,2023-12-29,5,3,2,2,1,3,3,4,4,4,2,2,2,2,3,13,public,38,Latin America and Caribbean
-online,103,2024-01-03,6,es,2024-01-03,2024-01-03,4,3,2,4,3,3,4,4,4,4,2,2,4,2,4,14,public,152,Latin America and Caribbean
-online,108,NA,1,fr,2024-01-28,2024-01-28,5,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,112,NA,5,en,2024-02-13,2024-02-13,3,3,3,3,4,2,4,3,4,5,2,3,4,4,3,NA,NA,NA,UNKNOWN
-online,114,NA,5,en,2024-03-21,2024-03-21,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,NA,NA,NA,UNKNOWN
-online,115,NA,5,en,2024-03-21,2024-03-21,3,4,1,5,5,5,5,3,3,4,4,4,4,5,4,NA,NA,NA,UNKNOWN
-online,123,NA,5,en,2024-04-15,2024-04-15,1,1,2,2,1,2,3,2,2,1,3,2,2,2,2,NA,NA,NA,UNKNOWN
-online,128,NA,5,en,2024-04-16,2024-04-16,5,5,5,3,4,5,5,5,5,5,5,5,5,5,5,NA,NA,NA,UNKNOWN
-online,129,NA,2,en,2024-04-17,2024-04-17,5,3,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,130,NA,5,en,2024-04-17,2024-04-17,1,1,1,1,1,1,2,1,1,2,1,1,1,1,1,NA,NA,NA,UNKNOWN
-online,131,NA,5,en,2024-04-17,2024-04-17,3,2,4,2,3,2,1,3,3,3,3,3,4,3,3,NA,NA,NA,UNKNOWN
-online,132,NA,2,en,2024-04-21,2024-04-21,3,3,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,134,NA,5,en,2024-04-22,2024-04-22,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,NA,NA,NA,UNKNOWN
-online,137,NA,3,en,2024-05-14,2024-05-14,4,5,4,5,4,5,5,5,5,5,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,143,NA,5,en,2024-07-19,2024-07-19,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,NA,NA,NA,UNKNOWN
-online,145,NA,5,en,2024-07-31,2024-07-31,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,NA,NA,NA,UNKNOWN
-online,147,NA,5,en,2024-07-31,2024-07-31,1,2,2,4,4,3,3,4,2,4,4,4,5,4,2,NA,NA,NA,UNKNOWN
-online,150,NA,5,en,2024-08-13,2024-08-13,2,3,2,3,3,3,3,3,1,2,1,2,5,3,5,NA,NA,NA,UNKNOWN
-online,151,NA,3,en,2024-08-19,2024-08-19,3,2,3,3,3,3,4,5,1,3,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,152,2024-09-05,6,en,2024-09-05,2024-09-05,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,public,84,Eastern and Southern Africa
-online,158,NA,5,en,2024-09-16,2024-09-16,1,2,3,2,1,3,2,2,2,3,2,2,2,2,3,NA,NA,NA,UNKNOWN
-online,161,NA,2,en,2024-10-01,2024-10-01,5,5,5,5,5,5,5,5,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,169,NA,5,en,2024-11-02,2024-11-02,3,3,2,2,1,5,3,3,2,5,2,2,2,2,2,NA,NA,NA,UNKNOWN
-online,171,2024-11-12,6,en,2024-11-12,2024-11-12,2,2,2,1,1,2,2,2,2,5,2,1,2,4,4,16,public,252,Eastern and Southern Africa
-online,174,NA,5,en,2024-12-05,2024-12-05,4,3,3,3,4,2,4,3,2,4,5,2,5,3,2,NA,NA,NA,UNKNOWN
-online,175,NA,5,en,2024-12-05,2024-12-05,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,NA,NA,NA,UNKNOWN
-online,179,2025-01-30,6,en,2025-01-30,2025-01-30,2,2,2,1,1,4,4,2,4,5,2,1,2,1,4,17,public,184,Middle East and North Africa
-online,180,NA,4,en,2025-01-30,2025-01-30,2,2,2,4,4,3,5,1,5,3,4,3,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,181,2025-02-03,6,en,2025-02-03,2025-02-03,5,3,3,5,3,5,3,5,3,5,3,3,3,3,5,18,public,45,Eastern and Southern Africa
-online,182,NA,5,en,2025-02-20,2025-02-20,2,3,3,3,1,1,1,3,3,3,2,3,3,3,3,NA,NA,NA,UNKNOWN
-online,185,NA,5,en,2025-03-12,2025-03-12,2,2,4,4,2,4,4,4,4,4,4,4,4,2,4,NA,NA,NA,UNKNOWN
-online,192,NA,3,en,2025-04-10,2025-04-10,3,4,4,3,3,4,4,4,4,5,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,195,2025-04-23,6,es,2025-04-23,2025-04-23,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,19,public,50,Latin America and Caribbean
-online,196,NA,2,es,2025-04-24,2025-04-24,5,5,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,199,NA,4,en,2025-06-09,2025-06-09,4,3,5,5,5,5,5,5,5,4,5,5,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,202,NA,2,en,2025-07-17,2025-07-17,3,4,3,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,206,NA,2,en,2025-09-08,2025-09-08,4,4,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN
-online,207,NA,5,en,2025-09-09,2025-09-09,1,1,3,3,3,3,3,3,3,3,3,3,3,3,3,NA,NA,NA,UNKNOWN
-offline,208,2025-08-15,6,en,NA,NA,3,3,2,1,1,3,3,3,3,2,3,2,2,1,3,20,public,240,South Asia
-offline,209,2024-01-15,6,en,NA,NA,5,3,3,1,1,3,4,3,2,4,4,3,2,2,3,20,public,240,South Asia
-offline,210,2018-01-15,6,en,NA,NA,3,3,1,1,1,5,4,4,2,4,3,3,1,1,4,21,public,240,South Asia
-offline,211,2024-02-01,6,en,NA,NA,3,4,2,1,1,5,4,4,4,4,4,4,3,1,5,21,public,240,South Asia
-offline,212,2024-07-08,6,en,NA,NA,3,3,3,1,1,4,1,2,2,3,1,1,3,2,3,22,public,252,Eastern and Southern Africa
-offline,213,2024-05-07,6,en,NA,NA,4,4,4,3,2,4,4,5,4,4,5,4,4,4,4,5,public,252,Eastern and Southern Africa
-offline - old 1,214,2023-10-18,6,en,NA,NA,4,3,3,2,3,4,2,4,3,4,4,2,3,NA,4,23,public,240,South Asia
-offline - old 2,215,2021-08-05,6,es,NA,NA,5,5,5,3,5,5,4,5,3,2,4,3,5,3,5,24,public,122,Latin America and Caribbean
-offline - old2,216,2020-11-15,6,es,NA,NA,2,5,5,1,2,2,4,3,5,4,2,4,1,1,5,25,public,149,Latin America and Caribbean
-offline - old2,217,2020-08-15,6,es,NA,NA,1,1,5,4,2,3,5,3,5,5,2,5,3,1,5,26,public,50,Latin America and Caribbean
-offline - old2,218,2020-08-10,6,es,NA,NA,1,1,3,3,2,3,4,3,5,4,2,5,1,1,5,27,public,50,Latin America and Caribbean
-offline - old2,219,2021-05-21,6,es,NA,NA,1,1,1,3,2,2,4,2,3,5,2,2,1,1,5,28,public,50,Latin America and Caribbean
-offline,220,2024-07-03,6,en,NA,NA,2,3,2,2,1,1,4,2,2,3,3,3,2,2,NA,29,public,240,South Asia
+on_off,id,date_submitted,last_page,language,date_started,date_last_act,irm11_short,irm12_short,irm21_short,irm31_short,irm32_short,irm33_short,irm34_short,irm35_short,irm36_short,irm37_short,irm41_short,irm42_short,irm51_short,irm52_short,irm53_short,utility_code,utility_type,country_id,region,version
+online,20,2022-09-20,6,en,2022-09-20,2022-09-20,5,5,5,4,4,3,5,5,4,4,4,5,3,4,4,1,public,252,Eastern and Southern Africa,current
+online,21,2022-09-20,6,en,2022-09-20,2022-09-20,3,3,1,1,1,4,3,4,5,5,3,4,3,5,5,2,public,252,Eastern and Southern Africa,current
+online,26,NA,5,en,2022-09-28,2022-09-28,1,1,1,1,1,3,1,2,3,1,2,2,1,2,1,3,public,252,Eastern and Southern Africa,current
+online,27,NA,4,en,2022-09-29,2022-09-29,4,4,3,4,3,4,4,5,5,4,4,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,29,NA,2,en,2022-09-29,2022-09-29,5,3,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,31,2022-09-30,6,en,2022-09-30,2022-09-30,4,4,5,4,4,4,4,5,5,4,4,4,4,3,5,5,public,252,Eastern and Southern Africa,current
+online,33,NA,5,es,2022-09-30,2022-09-30,3,2,1,4,4,3,2,2,2,5,1,4,1,4,4,NA,NA,NA,UNKNOWN,current
+online,43,2022-11-09,6,fr,2022-11-09,2022-11-09,5,4,5,4,5,3,4,3,4,5,4,4,5,5,5,6,confidential,NA,UNKNOWN,current
+online,47,2022-11-30,6,es,2022-11-30,2022-11-30,5,5,5,5,4,4,5,5,5,5,4,2,5,5,5,7,private,3,Western Europe,current
+online,54,2022-12-01,6,es,2022-12-01,2022-12-01,5,3,5,5,5,3,5,3,4,5,5,4,4,3,5,7,private,3,Western Europe,current
+online,49,2022-11-30,6,es,2022-11-30,2022-11-30,5,5,5,5,4,4,5,5,5,5,4,4,5,4,5,8,mixed,3,Western Europe,current
+online,50,NA,2,es,2022-11-30,2022-11-30,5,5,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,51,2022-11-30,6,es,2022-11-30,2022-11-30,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7,private,3,Western Europe,current
+online,52,2022-11-30,6,es,2022-11-30,2022-11-30,5,5,5,5,5,4,5,4,5,5,5,1,5,5,5,10,mixed,3,Western Europe,current
+online,53,2022-11-30,6,es,2022-11-30,2022-11-30,5,5,5,3,3,3,2,2,4,5,3,2,3,2,5,11,private,3,Western Europe,current
+online,55,2022-12-01,6,es,2022-12-01,2022-12-01,5,5,5,5,5,4,5,5,5,5,5,5,5,5,5,12,private,3,Western Europe,current
+online,57,NA,2,en,2022-12-01,2022-12-01,1,1,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,58,NA,5,en,2022-12-08,2022-12-08,1,1,2,5,5,4,2,2,3,3,5,3,5,5,5,NA,NA,NA,UNKNOWN,current
+online,66,NA,1,en,2023-01-24,2023-01-24,1,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,68,NA,5,es,2023-03-29,2023-03-29,1,2,4,2,3,4,5,4,5,5,3,3,4,4,1,NA,NA,NA,UNKNOWN,current
+online,76,NA,5,en,2023-07-06,2023-07-06,1,5,3,5,4,3,3,4,3,3,3,3,4,3,3,NA,NA,NA,UNKNOWN,current
+online,80,NA,4,es,2023-08-18,2023-08-18,1,1,1,1,1,1,1,1,1,1,1,1,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,93,NA,4,en,2023-11-23,2023-11-23,3,3,3,3,3,3,3,3,3,3,3,3,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,98,NA,2,es,2023-12-07,2023-12-07,5,2,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,102,2023-12-29,6,es,2023-12-29,2023-12-29,5,3,2,2,1,3,3,4,4,4,2,2,2,2,3,13,public,38,Latin America and Caribbean,current
+online,103,2024-01-03,6,es,2024-01-03,2024-01-03,4,3,2,4,3,3,4,4,4,4,2,2,4,2,4,14,public,152,Latin America and Caribbean,current
+online,108,NA,1,fr,2024-01-28,2024-01-28,5,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,112,NA,5,en,2024-02-13,2024-02-13,3,3,3,3,4,2,4,3,4,5,2,3,4,4,3,NA,NA,NA,UNKNOWN,current
+online,114,NA,5,en,2024-03-21,2024-03-21,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,NA,NA,NA,UNKNOWN,current
+online,115,NA,5,en,2024-03-21,2024-03-21,3,4,1,5,5,5,5,3,3,4,4,4,4,5,4,NA,NA,NA,UNKNOWN,current
+online,123,NA,5,en,2024-04-15,2024-04-15,1,1,2,2,1,2,3,2,2,1,3,2,2,2,2,NA,NA,NA,UNKNOWN,current
+online,128,NA,5,en,2024-04-16,2024-04-16,5,5,5,3,4,5,5,5,5,5,5,5,5,5,5,NA,NA,NA,UNKNOWN,current
+online,129,NA,2,en,2024-04-17,2024-04-17,5,3,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,130,NA,5,en,2024-04-17,2024-04-17,1,1,1,1,1,1,2,1,1,2,1,1,1,1,1,NA,NA,NA,UNKNOWN,current
+online,131,NA,5,en,2024-04-17,2024-04-17,3,2,4,2,3,2,1,3,3,3,3,3,4,3,3,NA,NA,NA,UNKNOWN,current
+online,132,NA,2,en,2024-04-21,2024-04-21,3,3,3,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,134,NA,5,en,2024-04-22,2024-04-22,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,NA,NA,NA,UNKNOWN,current
+online,137,NA,3,en,2024-05-14,2024-05-14,4,5,4,5,4,5,5,5,5,5,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,143,NA,5,en,2024-07-19,2024-07-19,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,NA,NA,NA,UNKNOWN,current
+online,145,NA,5,en,2024-07-31,2024-07-31,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,NA,NA,NA,UNKNOWN,current
+online,147,NA,5,en,2024-07-31,2024-07-31,1,2,2,4,4,3,3,4,2,4,4,4,5,4,2,NA,NA,NA,UNKNOWN,current
+online,150,NA,5,en,2024-08-13,2024-08-13,2,3,2,3,3,3,3,3,1,2,1,2,5,3,5,NA,NA,NA,UNKNOWN,current
+online,151,NA,3,en,2024-08-19,2024-08-19,3,2,3,3,3,3,4,5,1,3,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,152,2024-09-05,6,en,2024-09-05,2024-09-05,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,public,84,Eastern and Southern Africa,current
+online,158,NA,5,en,2024-09-16,2024-09-16,1,2,3,2,1,3,2,2,2,3,2,2,2,2,3,NA,NA,NA,UNKNOWN,current
+online,161,NA,2,en,2024-10-01,2024-10-01,5,5,5,5,5,5,5,5,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,169,NA,5,en,2024-11-02,2024-11-02,3,3,2,2,1,5,3,3,2,5,2,2,2,2,2,NA,NA,NA,UNKNOWN,current
+online,171,2024-11-12,6,en,2024-11-12,2024-11-12,2,2,2,1,1,2,2,2,2,5,2,1,2,4,4,16,public,252,Eastern and Southern Africa,current
+online,174,NA,5,en,2024-12-05,2024-12-05,4,3,3,3,4,2,4,3,2,4,5,2,5,3,2,NA,NA,NA,UNKNOWN,current
+online,175,NA,5,en,2024-12-05,2024-12-05,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,NA,NA,NA,UNKNOWN,current
+online,179,2025-01-30,6,en,2025-01-30,2025-01-30,2,2,2,1,1,4,4,2,4,5,2,1,2,1,4,17,public,184,Middle East and North Africa,current
+online,180,NA,4,en,2025-01-30,2025-01-30,2,2,2,4,4,3,5,1,5,3,4,3,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,181,2025-02-03,6,en,2025-02-03,2025-02-03,5,3,3,5,3,5,3,5,3,5,3,3,3,3,5,18,public,45,Eastern and Southern Africa,current
+online,182,NA,5,en,2025-02-20,2025-02-20,2,3,3,3,1,1,1,3,3,3,2,3,3,3,3,NA,NA,NA,UNKNOWN,current
+online,185,NA,5,en,2025-03-12,2025-03-12,2,2,4,4,2,4,4,4,4,4,4,4,4,2,4,NA,NA,NA,UNKNOWN,current
+online,192,NA,3,en,2025-04-10,2025-04-10,3,4,4,3,3,4,4,4,4,5,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,195,2025-04-23,6,es,2025-04-23,2025-04-23,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,19,public,50,Latin America and Caribbean,current
+online,196,NA,2,es,2025-04-24,2025-04-24,5,5,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,199,NA,4,en,2025-06-09,2025-06-09,4,3,5,5,5,5,5,5,5,4,5,5,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,202,NA,2,en,2025-07-17,2025-07-17,3,4,3,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,206,NA,2,en,2025-09-08,2025-09-08,4,4,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,UNKNOWN,current
+online,207,NA,5,en,2025-09-09,2025-09-09,1,1,3,3,3,3,3,3,3,3,3,3,3,3,3,NA,NA,NA,UNKNOWN,current
+offline,208,2025-08-15,6,en,NA,NA,3,3,2,1,1,3,3,3,3,2,3,2,2,1,3,20,public,240,South Asia,current
+offline,209,2024-01-15,6,en,NA,NA,5,3,3,1,1,3,4,3,2,4,4,3,2,2,3,20,public,240,South Asia,current
+offline,210,2018-01-15,6,en,NA,NA,3,3,1,1,1,5,4,4,2,4,3,3,1,1,4,21,public,240,South Asia,current
+offline,211,2024-02-01,6,en,NA,NA,3,4,2,1,1,5,4,4,4,4,4,4,3,1,5,21,public,240,South Asia,current
+offline,212,2024-07-08,6,en,NA,NA,3,3,3,1,1,4,1,2,2,3,1,1,3,2,3,22,public,252,Eastern and Southern Africa,current
+offline,213,2024-05-07,6,en,NA,NA,4,4,4,3,2,4,4,5,4,4,5,4,4,4,4,5,public,252,Eastern and Southern Africa,current
+offline,214,2023-10-18,6,en,NA,NA,4,3,3,2,3,4,2,4,3,4,4,2,3,NA,4,23,public,240,South Asia,pilot 1
+offline,215,2021-08-05,6,es,NA,NA,5,5,5,3,5,5,4,5,3,2,4,3,5,3,5,24,public,122,Latin America and Caribbean,pilot 2
+offline,216,2020-11-15,6,es,NA,NA,2,5,5,1,2,2,4,3,5,4,2,4,1,1,5,25,public,149,Latin America and Caribbean,pilot 2
+offline,217,2020-08-15,6,es,NA,NA,1,1,5,4,2,3,5,3,5,5,2,5,3,1,5,26,public,50,Latin America and Caribbean,pilot 2
+offline,218,2020-08-10,6,es,NA,NA,1,1,3,3,2,3,4,3,5,4,2,5,1,1,5,27,public,50,Latin America and Caribbean,pilot 2
+offline,219,2021-05-21,6,es,NA,NA,1,1,1,3,2,2,4,2,3,5,2,2,1,1,5,28,public,50,Latin America and Caribbean,pilot 2
+offline,220,2024-07-03,6,en,NA,NA,2,3,2,2,1,1,4,2,2,3,3,3,2,2,NA,29,public,240,South Asia,current

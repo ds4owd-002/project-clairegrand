@@ -8,7 +8,7 @@ format:
   html:
     embed-resources: true
     toc: true
-    toc-depth: 2
+    toc-depth: 1
     toc-title: "Contents"
 execute:
   warning: false
@@ -171,15 +171,39 @@ ia_ordered_regions <- ia_data |> mutate(
   region = factor(region, levels = c("Eastern and Southern Africa", "Middle East and North Africa", "South Asia", "Latin America and Caribbean", "Western Europe", "UNKNOWN" ))
 )
 
-tbl_data_overview <- ia_ordered_regions |> 
-    group_by(region) |> summarise(
+tbl_data_overview <- ia_data |>  
+  summarise(
       online_count = sum(on_off == "online", na.rm = TRUE),
-      offline_count = sum(on_off == "offline", na.rm = TRUE),
-      completed = sum(last_page > 4)
+      offline_count = sum(on_off == "offline", na.rm = TRUE), 
+      completed = sum(last_page > 4),
+      incomplete = sum(last_page < 5),
+      anon = sum(region == "UNKNOWN"),
+      utilities = n_distinct(utility_code,  na.rm = TRUE),
+      countries = n_distinct(country_id,  na.rm = TRUE)
   )
 
-tbl_data_overview
+```
 
+@tbl-data-overview shows the number of entries assessed, noting how many
+were submitted online and offline, how many were complete or not, how
+many were anonymous, and the number of utilities and countries
+represented.
+
+```{r}
+#| label: tbl-data-overview
+#| tbl-cap: "Overview of utility integrity assessment data."
+
+tbl_data_overview |>
+    gt() |>
+    tab_header(title = "Utility integrity assessment",
+               subtitle = "Data from 75 surveys") |>
+    cols_label(online_count = "Submitted online",
+               offline_count = "Submitted offline",
+               completed = "Complete surveys",
+               incomplete = "Incomplete surveys",
+               anon = "Anonymous entries",
+               utilities = "Distinct utilities",
+               countries = "Distinct countries")
 ```
 
 # Results
