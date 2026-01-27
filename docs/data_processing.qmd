@@ -44,21 +44,22 @@ short values for each score
 ```{r}
 ia_shortdates_shortscores <- ia_shortdates |> 
   mutate (
-    irm11_short = str_sub(irm11, 7, 7),
-    irm12_short = str_sub(irm12, 7, 7),
-    irm21_short = str_sub(irm21, 7, 7),
-    irm31_short = str_sub(irm31, 7, 7),
-    irm32_short = str_sub(irm32, 7, 7),
-    irm33_short = str_sub(irm33, 7, 7),
-    irm34_short = str_sub(irm34, 7, 7),
-    irm35_short = str_sub(irm35, 7, 7),
-    irm36_short = str_sub(irm36, 7, 7),
-    irm37_short = str_sub(irm37, 7, 7),
-    irm41_short = str_sub(irm41, 7, 7),
-    irm42_short = str_sub(irm42, 7, 7),
-    irm51_short = str_sub(irm51, 7, 7),
-    irm52_short = str_sub(irm52, 7, 7),
-    irm53_short = str_sub(irm53, 7, 7))
+    irm11_short = as.integer(str_sub(irm11, 7, 7)),
+    irm12_short = as.integer(str_sub(irm12, 7, 7)),
+    irm21_short = as.integer(str_sub(irm21, 7, 7)),
+    irm31_short = as.integer(str_sub(irm31, 7, 7)),
+    irm32_short = as.integer(str_sub(irm32, 7, 7)),
+    irm33_short = as.integer(str_sub(irm33, 7, 7)),
+    irm34_short = as.integer(str_sub(irm34, 7, 7)),
+    irm35_short = as.integer(str_sub(irm35, 7, 7)),
+    irm36_short = as.integer(str_sub(irm36, 7, 7)),
+    irm37_short = as.integer(str_sub(irm37, 7, 7)),
+    irm41_short = as.integer(str_sub(irm41, 7, 7)),
+    irm42_short = as.integer(str_sub(irm42, 7, 7)),
+    irm51_short = as.integer(str_sub(irm51, 7, 7)),
+    irm52_short = as.integer(str_sub(irm52, 7, 7)),
+    irm53_short = as.integer(str_sub(irm53, 7, 7))
+    )
   
 
 print(ia_shortdates_shortscores)
@@ -84,11 +85,26 @@ ia_short_versions_clean <- ia_short_versions |> mutate(on_off = case_when(
 ))
 ```
 
+add mean scores at principle level
+
+```{r}
+ia_short_versions_principles <- ia_short_versions_clean |> 
+  mutate(
+    mean_principle1 = rowMeans(select(ia_short_versions_clean, irm11_short, irm12_short), na.rm = TRUE),
+    mean_principle2 = rowMeans(select(ia_short_versions_clean, irm21_short), na.rm = TRUE),
+    mean_principle3 = rowMeans(select(ia_short_versions_clean, irm31_short, irm32_short, irm33_short, irm34_short, irm35_short, irm36_short, irm37_short), na.rm = TRUE),
+    mean_principle4 = rowMeans(select(ia_short_versions_clean, irm41_short, irm42_short), na.rm = TRUE),
+    mean_principle5 = rowMeans(select(ia_short_versions_clean, irm51_short, irm52_short, irm53_short), na.rm = TRUE)
+  )
+
+ia_short_versions_principles
+```
+
 filter empty surveys
 
 ```{r}
 
-ia_short_notempty <- ia_short_versions_clean |> 
+ia_clean_notempty <- ia_short_versions_principles |> 
   filter(last_page != 0)
 
 count(ia_short_notempty)
@@ -100,8 +116,8 @@ head(ia_short_notempty)
 write to processed
 
 ```{r}
-processed_data <- ia_short_notempty |>
-  select(on_off, id, date_submitted, last_page, language, date_started, date_last_act, irm11_short, irm12_short, irm21_short, irm31_short, irm32_short, irm33_short, irm34_short, irm35_short, irm36_short, irm37_short, irm41_short, irm42_short, irm51_short, irm52_short, irm53_short, utility_code, utility_type, country_id, region, version)
+processed_data <- ia_clean_notempty |>
+  select(on_off, id, date_submitted, last_page, language, date_started, date_last_act, irm11_short, irm12_short, mean_principle1, irm21_short, mean_principle2, irm31_short, irm32_short, irm33_short, irm34_short, irm35_short, irm36_short, irm37_short, mean_principle3, irm41_short, irm42_short, mean_principle4, irm51_short, irm52_short, irm53_short, mean_principle5, utility_code, utility_type, country_id, region, version)
 
 write_csv(processed_data,
           here::here("data/processed/processed_data.csv"))

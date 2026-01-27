@@ -8,7 +8,9 @@ date_started,Date survey was launched online. NA for offline surveys
 date_last_act,Date last information was entered in survey by the user. 
 irm11,Score for Indicator 1.1 on integrity leadership (between 1-5)
 irm12,Score for Indicator 1.2 on code of conduct (between 1-5)
+mean_principle1,"Means of scores from indicator 1.1 and 1.2, which together make up principle 1: Tone from the top"
 irm21,Score for Indicator 2.1 on integrity risk assessment  (between 1-5)
+mean_principle2,"Means of scores from indicator 2.1, which makes up principle 2: integrity risk assessment"
 irm31,Score for Indicator 3.1 on conflicts of interest (between 1-5)
 irm32,Score for Indicator 3.2 on whistleblowing (between 1-5)
 irm33,Score for Indicator 3.3 on recruitment processes  (between 1-5)
@@ -16,12 +18,16 @@ irm34,Score for Indicator 3.4 on procurement (between 1-5)
 irm35,Score for Indicator 3.5 on code of conduct (between 1-5)
 irm36,Score for Indicator 3.6 on participation (between 1-5)
 irm37,Score for Indicator 3.7 on financial management (between 1-5)
+mean_principle3,"Means of scores from indicator 3.1 through 3.7, which make up principle 3: integrity controls"
 irm41,Score for Indicator 4.1 on disciplinary action against staff (between 1-5)
 irm42,Score for Indicator 2.1 on disciplinary action against contractors  (between 1-5)
+mean_principle4,"Means of scores from indicators 4.1 and 4.2, which make up principle 4: disciplinary action"
 irm51,Score for Indicator 1.1 on integrity risk monitoring (between 1-5)
 irm52,Score for Indicator 1.2 on integrity risk management function review (between 1-5)
 irm53,Score for Indicator 2.1 on responsiveness to external accountability mechanisms  (between 1-5)
+mean_principle4,"Means of scores from indicators 5.1, 5.2, 5.3, which make up principle 5: risk management monitoring and external accountability"
 utility_code,Code identifying each responding service provider or survey user.
 utility_type,"Primary model of service provider - public, private or mixed."
 country_id,Randomly generated country code.
 region,Region of service provider or survey user.
+version,"Version of survey that was used. Can be version 1 - the first pilot (with scores mapped to current), version 2 - the second pilot (with scores mapped to current),  or the current version of the survey as it is online and in InWASH toolkit."

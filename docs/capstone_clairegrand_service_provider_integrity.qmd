@@ -167,10 +167,6 @@ ia_data <- read_csv(here::here("data/processed/processed_data.csv"))
 
 glimpse(ia_data)
 
-ia_ordered_regions <- ia_data |> mutate(
-  region = factor(region, levels = c("Eastern and Southern Africa", "Middle East and North Africa", "South Asia", "Latin America and Caribbean", "Western Europe", "UNKNOWN" ))
-)
-
 tbl_data_overview <- ia_data |>  
   summarise(
       online_count = sum(on_off == "online", na.rm = TRUE),
@@ -207,6 +203,29 @@ tbl_data_overview |>
 ```
 
 # Results
+
+```{r}
+
+ia_ordered_regions <- ia_data |> mutate(
+  region = factor(region, levels = c("Eastern and Southern Africa", "Middle East and North Africa", "South Asia", "Latin America and Caribbean", "Western Europe", "UNKNOWN" ))
+)
+
+region_summary <- ia_ordered_regions |> 
+  group_by(region) |> 
+  summarise(
+    mean_irm11 = mean(irm11_short) 
+    
+    
+  )
+```
+
+```{r}
+#| label: tbl-indicator summary
+#| tbl-cap: "Indicator scores per region"
+
+tbl_data_overview 
+
+```
 
 # Conclusions
 
