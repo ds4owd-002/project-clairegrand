@@ -103,9 +103,10 @@ examining 15 indicators categorised under 5 integrity principles:
 Service providers use the tool for a self-assessment. They score
 themselves for each indicator on a scale of 1 to 5, based on clear
 descriptions of the practices that they would have in place for each
-score. For example, the second indicator examines how effectively a
-service provider sets integrity standards and enforces them through a
-code of conduct or similar document. The 5 possible scores are:
+score. For example, the second indicator (IRM1.2) examines how
+effectively a service provider sets integrity standards and enforces
+them through a code of conduct or similar document. The 5 possible
+scores are:
 
 -   **Score 1:** There is no written code of conduct (or similar
     document) outlining what the Utility expects from staff regarding
@@ -145,15 +146,15 @@ expert or consultant.
 
 The analysis looks at:
 
+-   whether scores differ based on the type of utility, the way the the
+    survey was taken, or within utilities (over time or between
+    individual survey takers).
+
 -   whether there is significant variation in the practices of service
     providers across regions,
 
 -   whether there are clear trends, strengths, and weaknesses across
     indicators and principles,
-
--   whether scores differ based on the type of utility, the way the the
-    survey was taken, or within utilities (over time or between
-    individual survey takers).
 
 ```{r  echo = TRUE}
 
@@ -192,7 +193,7 @@ represented.
 tbl_data_overview |>
     gt() |>
     tab_header(title = "Utility integrity assessment",
-               subtitle = "Data from 75 surveys") |>
+              subtitle = "Data from 75 surveys") |>
     cols_label(online_count = "Submitted online",
                offline_count = "Submitted offline",
                completed = "Complete surveys",
@@ -204,27 +205,87 @@ tbl_data_overview |>
 
 # Results
 
+## Survey completeness
+
+```{r  echo = TRUE}
+
+library(ggplot2)
+library(ggthemes)
+library(ggpattern)
+
+ia_data <- ia_data |> mutate(status = case_when(
+    last_page > 4 ~ "complete",
+    last_page < 5 ~ "incomplete"
+    ))
+```
+
+Most respondents were able to complete the survey (over 70%).
+@fig-completeness shows that all respondents using the offline tool with
+support completed the survey in full and provided contact information.
+Most online respondents also completed the survey, even without
+dedicated support, though 12 did abandon early on (providing information
+for only up to 3 indicators on pages 1 and 2, out of 15 indicators).
+
 ```{r}
+#| label: fig-completeness
+#| fig.cap: "Survey completeness by input method (online/offline)"
+
+ggplot(ia_data, aes(
+    x = last_page,
+    fill = on_off)) +
+  geom_bar_pattern(aes(pattern_fill = status),
+                   pattern = 'circle') +
+    labs(title = "Survey completeness by input method (online / offline)",
+       x = "Last page acted on",
+       y = "Count",
+       fill = "Online / Offline",
+       pattern_fill = "Status") +
+  scale_fill_grey(start = 0.4, end = 0.8) +
+  theme_minimal()
+
+```
+
+## Score trends
+
+```{r}
+#|eval: true
+
+library(ggplot2)
+library(ggthemes)
 
 ia_ordered_regions <- ia_data |> mutate(
   region = factor(region, levels = c("Eastern and Southern Africa", "Middle East and North Africa", "South Asia", "Latin America and Caribbean", "Western Europe", "UNKNOWN" ))
 )
 
-region_summary <- ia_ordered_regions |> 
-  group_by(region) |> 
-  summarise(
-    mean_irm11 = mean(irm11_short) 
-    
-    
-  )
+ia_data_long <- ia_ordered_regions |>
+    mutate(id = as.character(id)) |>
+    pivot_longer(cols = irm11_short:irm53_short,
+               names_to = "indicator",
+               values_to = "score")
+
+
+ggplot(data = ia_data_long,
+       aes(x = indicator,
+           y = score,)) +
+  geom_col()
+
+
 ```
 
 ```{r}
-#| label: tbl-indicator summary
-#| tbl-cap: "Indicator scores per region"
+#| label: fig-completeness
+#| fig.cap: "Survey completeness by input method (online/offline)"
 
-tbl_data_overview 
 
+ggplot(data = ia_ordered_regions,
+       mapping = aes(x = region, 
+                     y = generation_kg_capita, 
+                     color = income_id)) +
+  geom_boxplot(outlier.fill = NA) +
+  geom_jitter(width = 0.1, alpha = 0.3) +
+  scale_color_colorblind() +
+  labs(x = "Income group",
+       y = "Waste generation (tons per capita per year)")
 ```
 
 # Conclusions
