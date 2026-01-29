@@ -188,7 +188,7 @@ represented.
 
 ```{r}
 #| label: tbl-data-overview
-#| tbl-cap: "Overview of utility integrity assessment data."
+#| tbl-cap: "Overview of utility integrity assessment data"
 
 tbl_data_overview |>
     gt() |>
@@ -219,23 +219,26 @@ ia_data <- ia_data |> mutate(status = case_when(
     ))
 ```
 
-Most respondents were able to complete the survey (over 70%).
-@fig-completeness shows that all respondents using the offline tool with
-support completed the survey in full and provided contact information.
-Most online respondents also completed the survey, even without
-dedicated support, though 12 did abandon early on (providing information
-for only up to 3 indicators on pages 1 and 2, out of 15 indicators).
+Most respondents were able to complete the survey (over 70%). This could
+indicate that there are still categories of service provider for whom
+the indicators are not able to easy to follow, relevant, or applicable
+to their context. @fig-completeness shows that all respondents using the
+offline tool with support completed the survey in full and provided
+contact information on page 6. Most online respondents also completed
+the survey, even without dedicated support, though 12 did abandon early
+on, providing information for only up to 3 indicators out of 15, on page
+1 (indicator IRM1.1 and IRM1.2) and page 2 (IRM2.1).
 
 ```{r}
 #| label: fig-completeness
-#| fig.cap: "Survey completeness by input method (online/offline)"
+#| fig-cap: "Integrity assessment completeness by input method (online/offline)"
 
 ggplot(ia_data, aes(
     x = last_page,
     fill = on_off)) +
   geom_bar_pattern(aes(pattern_fill = status),
                    pattern = 'circle') +
-    labs(title = "Survey completeness by input method (online / offline)",
+    labs(title = "Integrity assessment completeness by input method (online / offline)",
        x = "Last page acted on",
        y = "Count",
        fill = "Online / Offline",
@@ -253,39 +256,157 @@ ggplot(ia_data, aes(
 library(ggplot2)
 library(ggthemes)
 
+
 ia_ordered_regions <- ia_data |> mutate(
   region = factor(region, levels = c("Eastern and Southern Africa", "Middle East and North Africa", "South Asia", "Latin America and Caribbean", "Western Europe", "UNKNOWN" ))
-)
+  )
+
 
 ia_data_long <- ia_ordered_regions |>
-    mutate(id = as.character(id)) |>
-    pivot_longer(cols = irm11_short:irm53_short,
+    relocate(mean_principle1, .after = last_col()) |> 
+    relocate(mean_principle2, .after = last_col()) |> 
+    relocate(mean_principle3, .after = last_col()) |> 
+    relocate(mean_principle4, .after = last_col()) |> 
+    relocate(mean_principle5, .after = last_col()) |> 
+      mutate(id = as.character(id)) |>
+        pivot_longer(cols = irm11_short:irm53_short,
                names_to = "indicator",
                values_to = "score")
 
 
-ggplot(data = ia_data_long,
-       aes(x = indicator,
-           y = score,)) +
-  geom_col()
+score_overview <- ia_data_long |> 
+  group_by(indicator) |> 
+  summarise(
+    mean_scores = mean(score, na.rm = TRUE),
+    mode_scores = names(sort(table(score), decreasing = TRUE)[1]),
+    sd_scores = sd(score, na.rm = TRUE)
+  )
+
+score_overview
+
+ia_data_long_anon <- ia_data_long |> 
+   mutate(anonymity = case_when(
+  region == "UNKNOWN" ~ "unknown respondent",
+  TRUE ~ "known respondent"
+))
+
+score_overview_anon <- ia_data_long_anon |> 
+  group_by(indicator, anonymity) |> 
+  summarise(
+    mean_scores = mean(score, na.rm = TRUE),
+    mode_scores = names(sort(table(score), decreasing = TRUE)[1]),
+    sd_scores = sd(score, na.rm = TRUE)
+  )
+
+score_overview_anon
 
 
+ia_data_long_filteredanon <- ia_data_long |> 
+  filter(region != "UNKNOWN")
+
+score_overview_filtered <- ia_data_long_filteredanon |> 
+  group_by(indicator) |> 
+  summarise(
+    mean_scores = mean(score, na.rm = TRUE),
+    mode_scores = names(sort(table(score), decreasing = TRUE)[1]),
+    sd_scores = sd(score, na.rm = TRUE)
+  )
+
+score_overview_filtered 
+
+score_overview_filtered_source <- ia_data_long_filteredanon |> 
+  group_by(indicator, on_off) |> 
+  summarise(
+    mean_scores = mean(score, na.rm = TRUE),
+    mode_scores = names(sort(table(score), decreasing = TRUE)[1]),
+    sd_scores = sd(score, na.rm = TRUE)
+  )
+
+score_overview_filtered_source
+
+score_overview_filtered_regional <- ia_data_long_filteredanon |> 
+  group_by(indicator, region) |> 
+  summarise(
+    mean_scores = mean(score, na.rm = TRUE),
+    mode_scores = names(sort(table(score), decreasing = TRUE)[1]),
+    sd_scores = sd(score, na.rm = TRUE)
+  )
+
+score_overview_filtered_regional
+```
+
+add scores per principle
+
+```{r}
+#| label: tbl-score-overview
+#| tbl-cap: "Utility integrity assessment - Indicator scoring"
+
+score_overview |>
+    gt() |>
+    tab_header(title = "Utility Integrity Assessment Scores") |>
+    cols_label(indicator = "Indicator", 
+               mean_scores = "Mean",
+               mode_scores = "Mode",
+               sd_scores = "Standard Deviation"
+               ) |> 
+    fmt_number(
+      columns = everything(), 
+      decimals = 2)
 ```
 
 ```{r}
-#| label: fig-completeness
-#| fig.cap: "Survey completeness by input method (online/offline)"
+#| label: fig-score-comp-anon
+#| fig-cap: "Mean scores across integrity assessment indicators, with comparison of entries by known or anonymous respondents"
 
+ggplot(score_overview, aes(
+    x = indicator,
+    y = mean_scores)) +
+  geom_col() +
+  geom_point(data = score_overview_anon, 
+            aes(x = indicator, y = mean_scores, group = anonymity, color = anonymity)) +
+  labs(title = "Mean scores across integrity assessment indicators, with comparison of entries by known or anonymous respondents",
+       x = "Indicator",
+       y = "Mean scores", 
+       color = "Data anonymity") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 80, hjust = 0.8))
+```
 
-ggplot(data = ia_ordered_regions,
-       mapping = aes(x = region, 
-                     y = generation_kg_capita, 
-                     color = income_id)) +
-  geom_boxplot(outlier.fill = NA) +
-  geom_jitter(width = 0.1, alpha = 0.3) +
-  scale_color_colorblind() +
-  labs(x = "Income group",
-       y = "Waste generation (tons per capita per year)")
+```{r}
+#| label: fig-score-comp-source
+#| fig-cap: "Comparison of mean scores across integrity assessment indicators from known respondents, according to source (online/offline)"
+
+ggplot(score_overview_filtered_source, aes(
+    x = indicator,
+    y = mean_scores, 
+    fill = on_off)) +
+  geom_col(position = "dodge") +
+  labs(title = "Comparison of mean scores across integrity assessment indicators from known respondents, according to source (online/offline)",
+       x = "Indicator",
+       y = "Mean scores", 
+       fill = "Source (online/offline)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 80, hjust = 0.8))
+```
+
+```{r}
+#| label: fig-score-comp-region
+#| fig-cap: "Comparison of mean scores across integrity assessment indicators from known respondents, according to region"
+
+ggplot(score_overview_filtered, aes(
+    x = indicator,
+    y = mean_scores)) +
+  geom_col() +
+  geom_point(data = score_overview_filtered_regional, 
+            aes(x = indicator, y = mean_scores, group = region, color = region)) +
+  geom_line(data = score_overview_filtered_regional, 
+            aes(x = indicator, y = mean_scores, group = region, color = region)) + 
+  labs(title = "Comparison of mean scores across integrity assessment indicators from known respondents, according to region",
+       x = "Indicator",
+       y = "Mean scores", 
+       color = "Region") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 80, hjust = 0.8))
 ```
 
 # Conclusions
