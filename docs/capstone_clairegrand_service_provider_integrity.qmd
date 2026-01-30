@@ -61,52 +61,54 @@ trends in integrity management practices.
 
 # Methods
 
-WIN developed integrity indicators for utilities from 2018 onwards with
-support from the Inter-American Development Bank and in partnership with
-the Consortium for Water Integrity in Latin America (with SIWI and
-cewas). This set of indicators is sometimes referred to as the Utility
-Integrity Assessment. It is part of WIN's InWASH integrity management
-toolbox for water and sanitation service providers, an intensive process
-for prioritising and managing the integrity risks service providers face
-in their daily operations. The tool is also available separately as an
+WIN developed integrity indicators for utilities with support from the
+Inter-American Development Bank and in partnership with the Consortium
+for Water Integrity in Latin America (with SIWI and cewas). This set of
+indicators is generally referred to as the Utility Integrity Assessment.
+It is part of WIN's InWASH integrity management toolbox for water and
+sanitation service providers, an intensive process for prioritising and
+managing the integrity risks service providers face in their daily
+operations (a process which can also be run without the Utility
+Integrity Assessment). The tool is also available separately as an
 online survey at <https://www.waterintegritynetwork.net/inwash>.
 
-Local context and the local regulatory environment highly influence
-which governance and integrity practices are possible and effective for
-different utilities. Still, early pilots and assessment by WIN indicated
-that there are patterns in how good governance and integrity practices
-are implemented in organisations in the water and sanitation sectors
-globally and that benchmarking can be useful for urban service providers
-of a certain size (very small rural service providers tend to not yet
-have the capacity and systems for the governance practices described in
-the tool). The tool is based on these observations.
+Early pilots and assessment by WIN indicated that there are patterns in
+how good governance and integrity practices are implemented in
+organisations in the water and sanitation sectors globally and that
+benchmarking can be useful for urban service providers of a certain size
+(very small rural service providers tend to not yet have the capacity
+and systems for the governance practices described in the tool). This is
+the case even though local context and the local regulatory environment
+of course influence which governance and integrity practices are
+possible and effective for different utilities. The tool is based on
+these observations.
 
 The Utility Integrity Assessment was designed as a short survey
 examining 15 indicators categorised under 5 integrity principles:
 
-1.  Tone at the top (2 indicators: on leadership and on codes of
+1.  Tone at the top (with 2 indicators: on leadership and on codes of
     conduct);
 
-2.  Integrity risk assessment (1 indicator);
+2.  Integrity risk assessment (with 1 indicator);
 
-3.  Integrity controls (7 indicators, on conflicts of interest,
-    whistleblowing, recruitment, procurement, disclosure, participation,
-    and financial management);
+3.  Integrity controls (with 7 indicators, on control of conflicts of
+    interest, whistleblowing, recruitment, procurement, disclosure,
+    participation, and financial management);
 
-4.  Corrective action (2 indicators, on sanctions for staff and on
+4.  Corrective action (with 2 indicators, on sanctions for staff and on
     sanctions for contractors);
 
-5.  Monitoring (3 indicators, on risk monitoring, review of risk
+5.  Monitoring (with 3 indicators, on risk monitoring, review of risk
     management functions, and responsiveness to external accountability
     mechanisms).
 
 Service providers use the tool for a self-assessment. They score
 themselves for each indicator on a scale of 1 to 5, based on clear
 descriptions of the practices that they would have in place for each
-score. For example, the second indicator (IRM1.2) examines how
-effectively a service provider sets integrity standards and enforces
-them through a code of conduct or similar document. The 5 possible
-scores are:
+score. All indicators are formulated in similar ways. For example, the
+second indicator (IRM1.2) examines how effectively a service provider
+sets integrity standards and enforces them through a code of conduct or
+similar document. The 5 possible scores are:
 
 -   **Score 1:** There is no written code of conduct (or similar
     document) outlining what the Utility expects from staff regarding
@@ -139,10 +141,11 @@ scores are:
     induction programme.
 
 This analysis looks at available data since 2018, from service providers
-that filled the survey online independently and from service providers
-that participated in an InWASH process and received support and
-validation on the Utility Integrity Assessment from a WIN or partner
-expert or consultant.
+that filled the survey online independently, and from service providers
+responding offline either as pilot users of the Utility Integrity
+Assesment or as part of an InWASH process, and in each of these two
+cases receiving support and validation from a WIN or partner expert or
+consultant.
 
 The analysis looks at:
 
@@ -188,7 +191,7 @@ represented.
 
 ```{r}
 #| label: tbl-data-overview
-#| tbl-cap: "Overview of utility integrity assessment data"
+#| tbl-cap: "Overview of Utility Integrity Assessment data"
 
 tbl_data_overview |>
     gt() |>
@@ -220,14 +223,20 @@ ia_data <- ia_data |> mutate(status = case_when(
 ```
 
 Most respondents were able to complete the survey (over 70%). This could
-indicate that there are still categories of service provider for whom
-the indicators are not able to easy to follow, relevant, or applicable
-to their context. @fig-completeness shows that all respondents using the
-offline tool with support completed the survey in full and provided
-contact information on page 6. Most online respondents also completed
-the survey, even without dedicated support, though 12 did abandon early
-on, providing information for only up to 3 indicators out of 15, on page
-1 (indicator IRM1.1 and IRM1.2) and page 2 (IRM2.1).
+indicate that the indicators are generally well understood and relevant
+for different service providers. It is however possible that there are
+still categories of service providers for whom the indicators are not
+easy to follow, relevant, or applicable in their context. WIN indicates
+utility size is most likely a factor in how relevant the survey is. This
+could not be confirmed, nor could a threshold be specified with this
+data.
+
+@fig-completeness shows that all respondents using the offline tool
+(with support or some validation) completed the survey in full and
+provided contact information on page 6. Most online respondents also
+completed the survey, even without dedicated support, though 12 did
+abandon early on and provided information for only up to 3 indicators
+out of 15, on page 1 (indicator IRM1.1 and IRM1.2) and page 2 (IRM2.1).
 
 ```{r}
 #| label: fig-completeness
@@ -248,13 +257,24 @@ ggplot(ia_data, aes(
 
 ```
 
-## Score trends
+## Main score trends
 
 ```{r}
 #|eval: true
 
 library(ggplot2)
 library(ggthemes)
+
+principle_overview <- ia_data |> 
+  summarise(
+    mean_allprinciple1 = mean(mean_principle1, na.rm = TRUE),
+    mean_allprinciple2 = mean(mean_principle2, na.rm = TRUE),
+    mean_allprinciple3 = mean(mean_principle3, na.rm = TRUE),
+    mean_allprinciple4 = mean(mean_principle4, na.rm = TRUE),
+    mean_allprinciple5 = mean(mean_principle5, na.rm = TRUE)
+  )
+
+principle_overview
 
 
 ia_ordered_regions <- ia_data |> mutate(
@@ -275,14 +295,33 @@ ia_data_long <- ia_ordered_regions |>
 
 
 score_overview <- ia_data_long |> 
-  group_by(indicator) |> 
-  summarise(
-    mean_scores = mean(score, na.rm = TRUE),
-    mode_scores = names(sort(table(score), decreasing = TRUE)[1]),
-    sd_scores = sd(score, na.rm = TRUE)
+  mutate(
+    indicator_name = case_when(
+      indicator == "irm11_short" ~ "Integrity leadership",
+      indicator == "irm12_short" ~ "Code of conduct",
+      indicator == "irm21_short" ~ "Integrity risk assessment",
+      indicator == "irm31_short" ~ "Control of conflicts of interest",
+      indicator == "irm32_short" ~ "Whistleblowing",
+      indicator == "irm33_short" ~ "Merit-based recruitment and selection",
+      indicator == "irm34_short" ~ "Procurement controls",
+      indicator == "irm35_short" ~ "Transparency and disclosure",
+      indicator == "irm36_short" ~ "Feedback and participation",
+      indicator == "irm37_short" ~ "Management and financial controls",
+      indicator == "irm41_short" ~ "Sanctions against staff for integrity violations",
+      indicator == "irm42_short" ~ "Sanctions against contractors for integrity violations",
+      indicator == "irm51_short" ~ "Integrity risk monitoring",
+      indicator == "irm52_short" ~ "Reveiw of integrity risk management function",
+      indicator == "irm53_short" ~ "Responsiveness to external accountability mechanisms"
+    )) |> 
+  group_by(indicator, indicator_name) |> 
+      summarise(
+      mean_scores = mean(score, na.rm = TRUE),
+      mode_scores = names(sort(table(score), decreasing = TRUE)[1]),
+      sd_scores = sd(score, na.rm = TRUE)
   )
 
 score_overview
+
 
 ia_data_long_anon <- ia_data_long |> 
    mutate(anonymity = case_when(
@@ -332,19 +371,88 @@ score_overview_filtered_regional <- ia_data_long_filteredanon |>
     sd_scores = sd(score, na.rm = TRUE)
   )
 
-score_overview_filtered_regional
+
+score_variation_filtered_regional <- ia_data_long_filteredanon |> 
+  filter(region != "Middle East and North Africa") |> 
+    group_by(indicator, region) |> 
+      summarise(sd_regions = sd(score, na.rm = TRUE)
+  )
+
+score_variation_filtered_regional
+
+ia_region_wide <- score_variation_filtered_regional |> 
+  pivot_wider(
+    names_from = region,
+    values_from = sd_regions,
+    names_prefix = "sd_"
+  )
+
+ia_region_wide
 ```
 
-add scores per principle
+@tbl-principle-overview shows the mean scores aggregated at principle
+level. Scores for all principles are close to or above 3. Principle 3
+(Integrity controls) is strongest whereas Principle 4 (Disciplinary
+action) is weakest, though the differences are relatively small. There
+is more variation across indvidual indicators.
+
+@tbl-score-overview shows the mean scores for all the individual
+indicators. Service providers scored their management practices highest
+for indicator IRM5.3, which assesses responsiveness to external
+accountability mechanisms (including external audits and regulatory
+requirements). Service providers also scored themselves high for
+indicators IRM3.7 (management and financial controls) and IRM3.6
+(feedback and participation). This would imply they have strong
+budgeting, accounting, and audit processes in place as well as clear
+connection policies (IRM3.7). It also implies they have a policy for
+public participation, forums for participation, and strong customer
+feedback mechanisms in place, which all influence their management
+choices (IRM3.6). The areas with weakest scores were IRM3.2 (on
+whistleblowing) followed by IRM5.2 (on review of integrity risk
+management function and processes) and IRM4.2 (on sanctions on
+contractors for non-compliance).
+
+These findings contrast somewhat with analyses of results of other
+integrity management processes where service providers have identified
+integrity *risks*, in particular risks related to operations and
+customer relations. REF Indeed, service providers are rating themselves
+relatively highly even in areas where they are still perceving high
+risks, most clearly in how they interact with customers. The disconnect
+may be linked to regional variations not captured in previous integrity
+risk management process analyses, or it could indicate that the
+practices described in the highest level of indicator IRM3.6 are not
+ambitious enough to mitigate significant risk, or that some utilities
+misjudge the scale and effectiveness of their feedback and participation
+practices. A weakness of the Utility Integrity Assessment is that it
+provides only limited insight on practices to mitigate operational
+risks, even though these are perceived as high.
+
+```{r}
+#| label: tbl-principle-overview
+#| tbl-cap: "Utility Integrity Assessment- Mean scores per principle"
+
+principle_overview |> 
+  gt() |> 
+  tab_header (title = "Utility Integrity Assessment- Mean scores per principle") |> 
+  cols_label(mean_allprinciple1 = "Principle 1 - Tone from the top",
+    mean_allprinciple2 = "Principle 2 - Integrity assessment",
+    mean_allprinciple3 = "Principle 3 - Integrity controls",
+    mean_allprinciple4 = "Principle 4 - Corrective action",
+    mean_allprinciple5 = "Principle 5 - Monitoring") |> 
+      fmt_number(
+      columns = everything(), 
+      decimals = 2)
+
+```
 
 ```{r}
 #| label: tbl-score-overview
-#| tbl-cap: "Utility integrity assessment - Indicator scoring"
+#| tbl-cap: "Utility Integrity Assessment: Scores per indicator"
 
 score_overview |>
     gt() |>
-    tab_header(title = "Utility Integrity Assessment Scores") |>
-    cols_label(indicator = "Indicator", 
+    tab_header(title = "Utility Integrity Assessment: Scores per indicator") |>
+    cols_label(indicator_name = "Indicator",
                mean_scores = "Mean",
                mode_scores = "Mode",
                sd_scores = "Standard Deviation"
@@ -353,6 +461,16 @@ score_overview |>
       columns = everything(), 
       decimals = 2)
 ```
+
+## Impact of anonymity
+
+@fig-score-comp-anon shows the mean scores per principle for all
+respondents and indicates, with dots, the impact of anonymity on mean
+scores. Unknown respondents appear to have assessed themselves more
+severely across all indicators except indicators IRM3.1 (on control of
+conflict of interest), IRM 3.2 (on whistleblower protection), IRM5.1 (on
+integrity risk monitoring), and IRM5.2 (on review of integrity risk
+management function and processes)
 
 ```{r}
 #| label: fig-score-comp-anon
@@ -372,6 +490,23 @@ ggplot(score_overview, aes(
   theme(axis.text.x = element_text(angle = 80, hjust = 0.8))
 ```
 
+## Impact of input method, support and survey validation
+
+@fig-score-comp-source shows the differences between scores of known
+utilities that responded online and those of known utilities that
+responded offline, received some support, briefly justified their
+responses, and had their responses reviewed and commented on. There is
+marked difference between scores. Offline, verified scores are
+significantly lower than online scores, except for indicator IRM5.3 on
+responsiveness to external accountability mechanisms. The difference is
+most pronounced for indicators IRM5.2 on review of integrity risk
+management function and processes, IRM3.1 on control of conflicts of
+interest, and IRM3.2 on whistleblowing. The validation process does
+therefore have an impact though it is possible that some of the
+differences in scores could also be tied to regional differences and
+different regulatory requirements on service providers (regional
+distribution is not the same across online and offline responses).
+
 ```{r}
 #| label: fig-score-comp-source
 #| fig-cap: "Comparison of mean scores across integrity assessment indicators from known respondents, according to source (online/offline)"
@@ -386,8 +521,26 @@ ggplot(score_overview_filtered_source, aes(
        y = "Mean scores", 
        fill = "Source (online/offline)") +
   theme_minimal() +
-  theme(axis.text.x = element_text(angle = 80, hjust = 0.8))
+  theme(axis.text.x = element_text(angle = 80, hjust = 0.8)
+        )
 ```
+
+## Regional variations
+
+@fig-score-comp-region shows mean scores of all known utilities and how
+these scores differ for utilities grouped by region. It is to be noted
+that some regions are not represented as widely as others. Utilities in
+Western Europe appear to have somewhat higher scores on many indicators
+but other scores are quite mixed. The main differences can possibly be
+explained by different policy environments and legal status for service
+providers, or different regulatory requirements.
+
+However, as shown in @tbl-score-region, there is still significant
+spread in the data for utilities within a region. This suggests other
+factors, including possibly different dates of establishment of formal
+service provision in a country, size of surveyed utilities, or other
+more local context factors could also be influencing the regional
+trends. These require further exploration.
 
 ```{r}
 #| label: fig-score-comp-region
@@ -407,8 +560,40 @@ ggplot(score_overview_filtered, aes(
        color = "Region") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 80, hjust = 0.8))
+
+```
+
+```{r}
+#| label: tbl-score-region
+#| tbl-cap: "Utility Integrity Assessment: Variation in regions"
+
+ia_region_wide |> 
+    gt() |>
+    tab_header(title = "Utility Integrity Assessment: Variation in regions") |>
+    fmt_number(
+      columns = everything(), 
+      decimals = 2)
 ```
 
 # Conclusions
+
+The data from Integrity Assessments is still too limited to confirm
+decisive trends in integrity management practices of water and
+sanitation service providers. However, the data does still suggest that
+integrity management practices could be improved, especially to mitigate
+conflicts of interest, take action against non-compliant contractors,
+and protect whistleblowers.
+
+Many organisational and sector anti-corruption processes focus on
+procurement control. This is an important area of risk though it is not
+the weakest management area and some progress appears to already have
+been made.
+
+The completeness of responses, the spread of scores, and the spread of
+scores even within regions suggest the tool is able to capture practices
+that are influenced by the management of individual utilities, and not
+just broad contextual trends. The tool can thus provide important
+insight for utilities (and for regulatory authorities) on paths for
+action to control major integrity risks.
 
 # References
