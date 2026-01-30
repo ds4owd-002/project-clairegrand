@@ -55,9 +55,10 @@ a set of indicators to assess integrity management practices of service
 providers.
 
 This analysis aims to examine anonymised data from applications of the
-Water Integrity Network tool since 2018, to understand patterns of use,
-possible resistance and challenges to assessing integrity practices, and
-trends in integrity management practices.
+Water Integrity Network tool since 2018, to asses the tool's relevance
+and to understand patterns of use, possible resistance and challenges to
+assessing integrity practices, and trends in integrity management
+practices.
 
 # Methods
 
@@ -80,8 +81,7 @@ benchmarking can be useful for urban service providers of a certain size
 and systems for the governance practices described in the tool). This is
 the case even though local context and the local regulatory environment
 of course influence which governance and integrity practices are
-possible and effective for different utilities. The tool is based on
-these observations.
+possible and effective for different utilities.
 
 The Utility Integrity Assessment was designed as a short survey
 examining 15 indicators categorised under 5 integrity principles:
@@ -224,12 +224,12 @@ ia_data <- ia_data |> mutate(status = case_when(
 
 Most respondents were able to complete the survey (over 70%). This could
 indicate that the indicators are generally well understood and relevant
-for different service providers. It is however possible that there are
-still categories of service providers for whom the indicators are not
-easy to follow, relevant, or applicable in their context. WIN indicates
-utility size is most likely a factor in how relevant the survey is. This
-could not be confirmed, nor could a threshold be specified with this
-data.
+for different service providers. There are many possible reasons for not
+completing the survey but it possible that there are still categories of
+service providers for whom the indicators are not easy to follow,
+relevant, or applicable in their context. WIN indicates utility size is
+most likely a factor in how relevant the survey is. This could not be
+confirmed, nor could a threshold be specified with this data.
 
 @fig-completeness shows that all respondents using the offline tool
 (with support or some validation) completed the survey in full and
@@ -441,7 +441,8 @@ principle_overview |>
     mean_allprinciple5 = "Principle 5 - Monitoring") |> 
       fmt_number(
       columns = everything(), 
-      decimals = 2)
+      decimals = 2
+      )
 
 ```
 
