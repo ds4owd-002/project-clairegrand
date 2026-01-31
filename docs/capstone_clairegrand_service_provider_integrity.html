@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Claire Grandadam">
-<meta name="dcterms.date" content="2026-01-01">
+<meta name="dcterms.date" content="2026-01-31">
 
-<title>Integrity practices of global water service providers</title>
+<title>Integrity Practices of Global Water Service Providers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -56,7 +56,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+
+div.csl-bib-body { }
+div.csl-entry {
+clear: both;
+margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+margin-left:2em;
+text-indent:-2em;
+}
+div.csl-left-margin {
+min-width:2em;
+float:left;
+}
+div.csl-right-inline {
+margin-left:2em;
+padding-left:1em;
+}
+div.csl-indent {
+margin-left: 2em;
+}</style>
 
 
 <script>/*!
@@ -2208,10 +2228,17 @@ vertical-align: -.125em;
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
-  <ul>
+  <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#survey-completeness" id="toc-survey-completeness" class="nav-link" data-scroll-target="#survey-completeness">Survey completeness</a></li>
+  <li><a href="#main-score-trends" id="toc-main-score-trends" class="nav-link" data-scroll-target="#main-score-trends">Main score trends</a></li>
+  <li><a href="#impact-of-anonymity" id="toc-impact-of-anonymity" class="nav-link" data-scroll-target="#impact-of-anonymity">Impact of anonymity</a></li>
+  <li><a href="#impact-of-input-method-support-and-survey-validation" id="toc-impact-of-input-method-support-and-survey-validation" class="nav-link" data-scroll-target="#impact-of-input-method-support-and-survey-validation">Impact of input method, support and survey validation</a></li>
+  <li><a href="#regional-variations" id="toc-regional-variations" class="nav-link" data-scroll-target="#regional-variations">Regional variations</a></li>
+  </ul></li>
   <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -2221,25 +2248,34 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Integrity practices of global water service providers</h1>
-<p class="subtitle lead">A review of InWASH integrity assessment data</p>
+<h1 class="title">Integrity Practices of Global Water Service Providers</h1>
+<p class="subtitle lead">A Review of Utility Integrity Assessment Data</p>
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Claire Grandadam <a href="https://orcid.org/0009-0003-3841-2297" class="quarto-title-author-orcid"> <img role="img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://www.waterintegritynetwork.net">
+            Water Integrity Network
+            </a>
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Claire Grandadam </p>
-          </div>
-  </div>
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 1, 2026</p>
+      <p class="date">January 31, 2026</p>
     </div>
   </div>
   
@@ -2254,19 +2290,19 @@ vertical-align: -.125em;
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>To reach national policy objectives for water and sanitation service delivery and SDG6, water service providers globally must increase service coverage and service quality in the face of growing challenges related to financing, population growth, and climate change. This has spurred high interest in understanding the drivers of service provider performance, particularly from service provider managers, policy-makers, regulators, banks and other funders, as well as sector analysts.</p>
-<p>National and global utility benchmarking processes have been used widely for such analysis, to assess the way service providers operate, and to orient sector reforms. The most common benchmarking tools tend to focus on service quality, financial management, and operational efficiency. Recently, water sector utility benchmarking tools have also been evolving in part in response to two developments:</p>
+<p>National and global utility benchmarking processes have been used widely for such analyses, to assess the way service providers operate, and to orient sector reforms. The most common benchmarking tools tend to focus on service quality, financial management, and operational efficiency. Recently, water sector utility benchmarking tools have also been evolving in part in response to two developments:</p>
 <ul>
-<li><p>First, the recognition that performance is affected by governance issues and corruption, and the related evidence that anti-corruption and integrity management can support utility performance (Barreto-Dillon, et al., 2018; WIN, 2021; IDB, 2024). There is a need for better tools that can support service providers striving for integrity, equity, sustainability, and resilience.</p></li>
-<li><p>Second, growing criticism of the limits and bias in major utility benchmarking tools that have primarily focused on efficiency, to the detriment of distributional equity (Bhatt, 2024).</p></li>
+<li><p>First, the recognition that performance is affected by governance issues and corruption, and the related evidence that anti-corruption and integrity management can support utility performance <span class="citation" data-cites="barreto2018 wigo2 IDB2024">(<a href="#ref-IDB2024" role="doc-biblioref">Acuña Mantilla &amp; Vergara Stuardo, 2024</a>; <a href="#ref-barreto2018" role="doc-biblioref">Barreto-Dillon et al., 2018</a>; <a href="#ref-wigo2" role="doc-biblioref">Water Integrity Network (WIN), 2021</a>)</span>. There is a need for better tools that can support service providers striving for integrity, equity, sustainability, and resilience.</p></li>
+<li><p>Second, growing criticism of the limits and bias in major utility benchmarking tools that have primarily focused on efficiency, to the detriment of distributional equity <span class="citation" data-cites="bhatt2024">(<a href="#ref-bhatt2024" role="doc-biblioref">Bhatt, 2024</a>)</span>.</p></li>
 </ul>
-<p>Major utility benchmarking tools such as Aquarating and NewIBnet recently introduced new process indicators focusing on management practices (in 2022 and 2023 respectively). There is however limited data available on their use. The Water Integrity Network (WIN) also developed a set of indicators to assess integrity management practices of service providers.</p>
-<p>This analysis aims to examine anonymised data from applications of the Water Integrity Network tool since 2018, to understand patterns of use, possible resistance and challenges to assessing integrity practices, and trends in integrity management practices.</p>
+<p>Major utility benchmarking tools such as Aquarating and NewIBnet recently introduced new process indicators focusing on management practices (in 2022 and 2023 respectively) <span class="citation" data-cites="cubillo2022">(<a href="#ref-cubillo2022" role="doc-biblioref">Cubillo et al., 2022</a>)</span>. There is however limited data available on their use. The Water Integrity Network (WIN) also developed a set of indicators in 2018, to assess integrity management practices of service providers.</p>
+<p>This analysis aims to examine anonymised data from applications of the Water Integrity Network tool since 2018, to asses the tool’s relevance and to understand patterns of use, possible resistance and challenges to assessing integrity practices, and trends in integrity management practices.</p>
 </section>
 <section id="methods" class="level1">
 <h1>Methods</h1>
-<p>WIN developed integrity indicators for utilities with support from the Inter-American Development Bank and in partnership with the Consortium for Water Integrity in Latin America (with SIWI and cewas). This set of indicators is generally referred to as the Utility Integrity Assessment. It is part of WIN’s InWASH integrity management toolbox for water and sanitation service providers, an intensive process for prioritising and managing the integrity risks service providers face in their daily operations (a process which can also be run without the Utility Integrity Assessment). The tool is also available separately as an online survey at <a href="https://www.waterintegritynetwork.net/inwash" class="uri">https://www.waterintegritynetwork.net/inwash</a>.</p>
-<p>Early pilots and assessment by WIN indicated that there are patterns in how good governance and integrity practices are implemented in organisations in the water and sanitation sectors globally and that benchmarking can be useful for urban service providers of a certain size (very small rural service providers tend to not yet have the capacity and systems for the governance practices described in the tool). This is the case even though local context and the local regulatory environment of course influence which governance and integrity practices are possible and effective for different utilities. The tool is based on these observations.</p>
-<p>The Utility Integrity Assessment was designed as a short survey examining 15 indicators categorised under 5 integrity principles:</p>
+<p>WIN developed integrity indicators for utilities with support from the Inter-American Development Bank and in partnership with the Consortium for Water Integrity in Latin America (with SIWI and cewas). This set of indicators is generally referred to as the Utility Integrity Assessment. It is part of WIN’s InWASH integrity management toolbox for water and sanitation service providers, an intensive process for prioritising and managing the integrity risks service providers face in their daily operations (a process which can also be run without the Utility Integrity Assessment). The tool is also freely available separately as an online survey at <a href="https://www.waterintegritynetwork.net/inwash" class="uri">https://www.waterintegritynetwork.net/inwash</a>.</p>
+<p>Early pilots and analyses by WIN indicated that there are patterns in how good governance and integrity practices are implemented in organisations in the water and sanitation sectors globally and that benchmarking can be useful for urban service providers of a certain size. This is the case even though local context and the local regulatory environment of course influence which governance and integrity practices are possible and effective for different utilities.</p>
+<p>Based on these observations, the Utility Integrity Assessment was designed as a short survey examining 15 indicators categorised under 5 integrity principles:</p>
 <ol type="1">
 <li><p>Tone at the top (with 2 indicators: on leadership and on codes of conduct);</p></li>
 <li><p>Integrity risk assessment (with 1 indicator);</p></li>
@@ -2282,14 +2318,16 @@ vertical-align: -.125em;
 <li><p><strong>Score 4:</strong> Between 3 and 5.</p></li>
 <li><p><strong>Score 5:</strong> The code of conduct (or a similar document) contains ALL of the elements outlined in Level 3. The code of conduct was revised at most 3 years ago or more recently, after 1) the most recent changes to workplace profiles, including restructuring, relocation, changes in key roles or decision-making processes, or 2) the most recent changes in the external environment, including sector reform, new relevant legislation, changes in government strategies or in contractors’ business practices. Code of conduct training is routinely given to new employees as part of their induction programme.</p></li>
 </ul>
-<p>This analysis looks at available data since 2018, from service providers that filled the survey online independently, and from service providers responding offline either as pilot users of the Utility Integrity Assesment or as part of an InWASH process, and in each of these two cases receiving support and validation from a WIN or partner expert or consultant.</p>
+<p>This analysis looks at available data since 2018, from service providers that filled the survey online independently, and from service providers responding offline either as pilot users of the Utility Integrity Assesment or as participants of an InWASH process. The offline respondents received some support to fill in the survey and had to provide some justification for the scores (a brief explanation or link to evidence). WIN or partner expert or consultant also read and validated the scores.</p>
 <p>The analysis looks at:</p>
 <ul>
-<li><p>whether scores differ based on the type of utility, the way the the survey was taken, or within utilities (over time or between individual survey takers).</p></li>
-<li><p>whether there is significant variation in the practices of service providers across regions,</p></li>
 <li><p>whether there are clear trends, strengths, and weaknesses across indicators and principles,</p></li>
+<li><p>whether scores differ based on the way the the survey was taken,</p></li>
+<li><p>whether there is significant variation in the practices of service providers across regions.</p></li>
 </ul>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
@@ -2299,6 +2337,7 @@ vertical-align: -.125em;
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>ia_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;data/processed/processed_data.csv&quot;</span>))</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(ia_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 75
 Columns: 32
@@ -2335,6 +2374,8 @@ $ country_id      &lt;dbl&gt; 252, 252, 252, NA, NA, 252, NA, NA, 3, 3, 3, NA, 3
 $ region          &lt;chr&gt; &quot;Eastern and Southern Africa&quot;, &quot;Eastern and Southern A…
 $ version         &lt;chr&gt; &quot;current&quot;, &quot;current&quot;, &quot;current&quot;, &quot;current&quot;, &quot;current&quot;,…</code></pre>
 </div>
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tbl_data_overview <span class="ot">&lt;-</span> ia_data <span class="sc">|&gt;</span>  </span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">online_count =</span> <span class="fu">sum</span>(on_off <span class="sc">==</span> <span class="st">&quot;online&quot;</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
@@ -2345,9 +2386,12 @@ $ version         &lt;chr&gt; &quot;current&quot;, &quot;current&quot;, &quot;cu
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">utilities =</span> <span class="fu">n_distinct</span>(utility_code,  <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">countries =</span> <span class="fu">n_distinct</span>(country_id,  <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div>
 <p><a href="#tbl-data-overview" class="quarto-xref">Table 1</a> shows the number of entries assessed, noting how many were submitted online and offline, how many were complete or not, how many were anonymous, and the number of utilities and countries represented.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tbl_data_overview <span class="sc">|&gt;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">&quot;Utility integrity assessment&quot;</span>,</span>
@@ -2359,27 +2403,28 @@ $ version         &lt;chr&gt; &quot;current&quot;, &quot;current&quot;, &quot;cu
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">anon =</span> <span class="st">&quot;Anonymous entries&quot;</span>,</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">utilities =</span> <span class="st">&quot;Distinct utilities&quot;</span>,</span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">countries =</span> <span class="st">&quot;Distinct countries&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div id="tbl-data-overview" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table 1: Overview of utility integrity assessment data
+Table 1: Overview of Utility Integrity Assessment data
 </figcaption>
 <div aria-describedby="tbl-data-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="pogwlqikja" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#pogwlqikja table {
+<div id="ynfqqgmznr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ynfqqgmznr table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#pogwlqikja thead, #pogwlqikja tbody, #pogwlqikja tfoot, #pogwlqikja tr, #pogwlqikja td, #pogwlqikja th {
+#ynfqqgmznr thead, #ynfqqgmznr tbody, #ynfqqgmznr tfoot, #ynfqqgmznr tr, #ynfqqgmznr td, #ynfqqgmznr th {
 border-style: none;
 }
-#pogwlqikja p {
+#ynfqqgmznr p {
 margin: 0;
 padding: 0;
 }
-#pogwlqikja .gt_table {
+#ynfqqgmznr .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -2404,11 +2449,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#pogwlqikja .gt_caption {
+#ynfqqgmznr .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#pogwlqikja .gt_title {
+#ynfqqgmznr .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -2419,7 +2464,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#pogwlqikja .gt_subtitle {
+#ynfqqgmznr .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -2430,7 +2475,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#pogwlqikja .gt_heading {
+#ynfqqgmznr .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -2441,12 +2486,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#pogwlqikja .gt_bottom_border {
+#ynfqqgmznr .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#pogwlqikja .gt_col_headings {
+#ynfqqgmznr .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2460,7 +2505,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#pogwlqikja .gt_col_heading {
+#ynfqqgmznr .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2479,7 +2524,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#pogwlqikja .gt_column_spanner_outer {
+#ynfqqgmznr .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2490,13 +2535,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#pogwlqikja .gt_column_spanner_outer:first-child {
+#ynfqqgmznr .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#pogwlqikja .gt_column_spanner_outer:last-child {
+#ynfqqgmznr .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#pogwlqikja .gt_column_spanner {
+#ynfqqgmznr .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -2507,10 +2552,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#pogwlqikja .gt_spanner_row {
+#ynfqqgmznr .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#pogwlqikja .gt_group_heading {
+#ynfqqgmznr .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2535,7 +2580,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#pogwlqikja .gt_empty_group_heading {
+#ynfqqgmznr .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -2549,13 +2594,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#pogwlqikja .gt_from_md > :first-child {
+#ynfqqgmznr .gt_from_md > :first-child {
 margin-top: 0;
 }
-#pogwlqikja .gt_from_md > :last-child {
+#ynfqqgmznr .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#pogwlqikja .gt_row {
+#ynfqqgmznr .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2573,7 +2618,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#pogwlqikja .gt_stub {
+#ynfqqgmznr .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2585,7 +2630,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#pogwlqikja .gt_stub_row_group {
+#ynfqqgmznr .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2598,13 +2643,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#pogwlqikja .gt_row_group_first td {
+#ynfqqgmznr .gt_row_group_first td {
 border-top-width: 2px;
 }
-#pogwlqikja .gt_row_group_first th {
+#ynfqqgmznr .gt_row_group_first th {
 border-top-width: 2px;
 }
-#pogwlqikja .gt_summary_row {
+#ynfqqgmznr .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -2613,14 +2658,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#pogwlqikja .gt_first_summary_row {
+#ynfqqgmznr .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#pogwlqikja .gt_first_summary_row.thick {
+#ynfqqgmznr .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#pogwlqikja .gt_last_summary_row {
+#ynfqqgmznr .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2629,7 +2674,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#pogwlqikja .gt_grand_summary_row {
+#ynfqqgmznr .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -2638,7 +2683,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#pogwlqikja .gt_first_grand_summary_row {
+#ynfqqgmznr .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2647,7 +2692,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#pogwlqikja .gt_last_grand_summary_row_top {
+#ynfqqgmznr .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2656,10 +2701,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#pogwlqikja .gt_striped {
+#ynfqqgmznr .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#pogwlqikja .gt_table_body {
+#ynfqqgmznr .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2667,7 +2712,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#pogwlqikja .gt_footnotes {
+#ynfqqgmznr .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -2680,7 +2725,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#pogwlqikja .gt_footnote {
+#ynfqqgmznr .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -2688,7 +2733,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#pogwlqikja .gt_sourcenotes {
+#ynfqqgmznr .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -2701,64 +2746,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#pogwlqikja .gt_sourcenote {
+#ynfqqgmznr .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#pogwlqikja .gt_left {
+#ynfqqgmznr .gt_left {
 text-align: left;
 }
-#pogwlqikja .gt_center {
+#ynfqqgmznr .gt_center {
 text-align: center;
 }
-#pogwlqikja .gt_right {
+#ynfqqgmznr .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#pogwlqikja .gt_font_normal {
+#ynfqqgmznr .gt_font_normal {
 font-weight: normal;
 }
-#pogwlqikja .gt_font_bold {
+#ynfqqgmznr .gt_font_bold {
 font-weight: bold;
 }
-#pogwlqikja .gt_font_italic {
+#ynfqqgmznr .gt_font_italic {
 font-style: italic;
 }
-#pogwlqikja .gt_super {
+#ynfqqgmznr .gt_super {
 font-size: 65%;
 }
-#pogwlqikja .gt_footnote_marks {
+#ynfqqgmznr .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#pogwlqikja .gt_asterisk {
+#ynfqqgmznr .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#pogwlqikja .gt_indent_1 {
+#ynfqqgmznr .gt_indent_1 {
 text-indent: 5px;
 }
-#pogwlqikja .gt_indent_2 {
+#ynfqqgmznr .gt_indent_2 {
 text-indent: 10px;
 }
-#pogwlqikja .gt_indent_3 {
+#ynfqqgmznr .gt_indent_3 {
 text-indent: 15px;
 }
-#pogwlqikja .gt_indent_4 {
+#ynfqqgmznr .gt_indent_4 {
 text-indent: 20px;
 }
-#pogwlqikja .gt_indent_5 {
+#ynfqqgmznr .gt_indent_5 {
 text-indent: 25px;
 }
-#pogwlqikja .katex-display {
+#ynfqqgmznr .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#pogwlqikja div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ynfqqgmznr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -2806,6 +2851,8 @@ height: 0px !important;
 <section id="survey-completeness" class="level2">
 <h2 class="anchored" data-anchor-id="survey-completeness">Survey completeness</h2>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpattern)</span>
@@ -2814,10 +2861,14 @@ height: 0px !important;
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    last_page <span class="sc">&gt;</span> <span class="dv">4</span> <span class="sc">~</span> <span class="st">&quot;complete&quot;</span>,</span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    last_page <span class="sc">&lt;</span> <span class="dv">5</span> <span class="sc">~</span> <span class="st">&quot;incomplete&quot;</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    ))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div>
-<p>Most respondents were able to complete the survey (over 70%). This could indicate that the indicators are generally well understood and relevant for different service providers. It is however possible that there are still categories of service providers for whom the indicators are not easy to follow, relevant, or applicable in their context. WIN indicates utility size is most likely a factor in how relevant the survey is. This could not be confirmed, nor could a threshold be specified with this data.</p>
+<p>Most respondents were able to complete the survey (over 70%). This could indicate that the indicators are generally well understood and relevant for different service providers.</p>
+<p>There are many possible reasons for not completing the survey, but it is possible that there are still categories of service providers for whom the indicators are not easy to follow, relevant, or applicable in their context. WIN indicates utility size is most likely a factor in how relevant the survey is. This could not be confirmed, nor could a threshold be specified with this data.</p>
 <p><a href="#fig-completeness" class="quarto-xref">Figure 1</a> shows that all respondents using the offline tool (with support or some validation) completed the survey in full and provided contact information on page 6. Most online respondents also completed the survey, even without dedicated support, though 12 did abandon early on and provided information for only up to 3 indicators out of 15, on page 1 (indicator IRM1.1 and IRM1.2) and page 2 (IRM2.1).</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(ia_data, <span class="fu">aes</span>(</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> last_page,</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> on_off)) <span class="sc">+</span></span>
@@ -2830,6 +2881,7 @@ height: 0px !important;
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">pattern_fill =</span> <span class="st">&quot;Status&quot;</span>) <span class="sc">+</span></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_grey</span>(<span class="at">start =</span> <span class="fl">0.4</span>, <span class="at">end =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output-display">
 <div id="fig-completeness" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -2847,6 +2899,8 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 <section id="main-score-trends" class="level2">
 <h2 class="anchored" data-anchor-id="main-score-trends">Main score trends</h2>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|eval: true</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -2862,6 +2916,7 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>principle_overview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 5
   mean_allprinciple1 mean_allprinciple2 mean_allprinciple3 mean_allprinciple4
@@ -2869,6 +2924,8 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 1               3.06               3.14               3.27               2.99
 # ℹ 1 more variable: mean_allprinciple5 &lt;dbl&gt;</code></pre>
 </div>
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ia_ordered_regions <span class="ot">&lt;-</span> ia_data <span class="sc">|&gt;</span> <span class="fu">mutate</span>(</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">region =</span> <span class="fu">factor</span>(region, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;Eastern and Southern Africa&quot;</span>, <span class="st">&quot;Middle East and North Africa&quot;</span>, <span class="st">&quot;South Asia&quot;</span>, <span class="st">&quot;Latin America and Caribbean&quot;</span>, <span class="st">&quot;Western Europe&quot;</span>, <span class="st">&quot;UNKNOWN&quot;</span> ))</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  )</span>
@@ -2913,6 +2970,7 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 <span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>score_overview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 15 × 5
 # Groups:   indicator [15]
@@ -2934,6 +2992,8 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 14 irm52_short Reveiw of integrity risk manag…        2.83 1                1.45
 15 irm53_short Responsiveness to external acc…        3.63 5                1.42</code></pre>
 </div>
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ia_data_long_anon <span class="ot">&lt;-</span> ia_data_long <span class="sc">|&gt;</span> </span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(<span class="at">anonymity =</span> <span class="fu">case_when</span>(</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  region <span class="sc">==</span> <span class="st">&quot;UNKNOWN&quot;</span> <span class="sc">~</span> <span class="st">&quot;unknown respondent&quot;</span>,</span>
@@ -2949,6 +3009,7 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 <span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>score_overview_anon</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 30 × 5
 # Groups:   indicator [15]
@@ -2966,6 +3027,8 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 10 irm32_short unknown respondent        2.97 1                1.45
 # ℹ 20 more rows</code></pre>
 </div>
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ia_data_long_filteredanon <span class="ot">&lt;-</span> ia_data_long <span class="sc">|&gt;</span> </span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(region <span class="sc">!=</span> <span class="st">&quot;UNKNOWN&quot;</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2978,6 +3041,7 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>score_overview_filtered </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 15 × 4
    indicator   mean_scores mode_scores sd_scores
@@ -2998,6 +3062,8 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 14 irm52_short        2.7  1                1.53
 15 irm53_short        4.23 5                1.14</code></pre>
 </div>
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>score_overview_filtered_source <span class="ot">&lt;-</span> ia_data_long_filteredanon <span class="sc">|&gt;</span> </span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(indicator, on_off) <span class="sc">|&gt;</span> </span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
@@ -3007,6 +3073,7 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>score_overview_filtered_source</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 30 × 5
 # Groups:   indicator [15]
@@ -3024,6 +3091,8 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 10 irm32_short online         3.11 1                1.68
 # ℹ 20 more rows</code></pre>
 </div>
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>score_overview_filtered_regional <span class="ot">&lt;-</span> ia_data_long_filteredanon <span class="sc">|&gt;</span> </span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(indicator, region) <span class="sc">|&gt;</span> </span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
@@ -3040,6 +3109,7 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 <span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>score_variation_filtered_regional</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 60 × 3
 # Groups:   indicator [15]
@@ -3057,6 +3127,8 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 10 irm21_short South Asia                       0.753
 # ℹ 50 more rows</code></pre>
 </div>
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>ia_region_wide <span class="ot">&lt;-</span> score_variation_filtered_regional <span class="sc">|&gt;</span> </span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> region,</span>
@@ -3065,6 +3137,7 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>ia_region_wide</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 15 × 5
 # Groups:   indicator [15]
@@ -3090,10 +3163,13 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 # ℹ 1 more variable: `sd_Western Europe` &lt;dbl&gt;</code></pre>
 </div>
 </div>
-<p><a href="#tbl-principle-overview" class="quarto-xref">Table 2</a> shows the mean scores aggregated at principle level. Scores for all principles are close to or above 3. Principle 3 - Integrity controls is strongest whereas Principle 4 - Discplinary action is weakest, though the differences are relatively small. There is more variation across indvidual indicators.</p>
+<p><a href="#tbl-principle-overview" class="quarto-xref">Table 2</a> shows the mean scores aggregated at principle level. Scores for all principles are close to or above 3. Principle 3 (Integrity controls) is strongest whereas Principle 4 (Disciplinary action) is weakest, though the differences are relatively small. There is more variation across indvidual indicators.</p>
 <p><a href="#tbl-score-overview" class="quarto-xref">Table 3</a> shows the mean scores for all the individual indicators. Service providers scored their management practices highest for indicator IRM5.3, which assesses responsiveness to external accountability mechanisms (including external audits and regulatory requirements). Service providers also scored themselves high for indicators IRM3.7 (management and financial controls) and IRM3.6 (feedback and participation). This would imply they have strong budgeting, accounting, and audit processes in place as well as clear connection policies (IRM3.7). It also implies they have a policy for public participation, forums for participation, and strong customer feedback mechanisms in place, which all influence their management choices (IRM3.6). The areas with weakest scores were IRM3.2 (on whistleblowing) followed by IRM5.2 (on review of integrity risk management function and processes) and IRM4.2 (on sanctions on contractors for non-compliance).</p>
-<p>These findings contrast somewhat with analyses of results of other integrity management processes where service providers have identified integrity <em>risks</em>, in particular risks related to operations and customer relations. REF Indeed, service providers are rating themselves relatively highly even in areas where they are still perceving high risks, most clearly in how they interact with customers. The disconnect may be linked to regional variations not captured in previous integrity risk management process analyses, or it could indicate that the practices described in the highest level of indicator IRM3.6 are not ambitious enough to mitigate significant risk, or that some utilities misjudge the scale and effectiveness of their feedback and participation practices. The Utility Integrity Assessment provides only limited insight on practices to mitigate operational risks, even though these are perceived as high.</p>
+<p>These findings contrast somewhat with analyses of results of other integrity management processes where service providers have identified the integrity <em>risks</em> they face, in particular risks related to operations and customer relations <span class="citation" data-cites="avello2023">(<a href="#ref-avello2023" role="doc-biblioref">Avello et al., 2023</a>)</span>. Indeed, this data shows service providers are rating themselves relatively highly even in areas where they are still perceiving high risks, most clearly in how they interact with customers. The disconnect may be linked to regional variations not captured in integrity risk management process analyses, or it could indicate that the practices described in the highest level of indicator IRM3.6 are not ambitious enough to mitigate significant risk, or that some utilities misjudge the scale and effectiveness of their feedback and participation practices.</p>
+<p>A weakness of the Utility Integrity Assessment is that it provides only limited insight on practices to mitigate integrity risks related to operations, even though these are perceived as high.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>principle_overview <span class="sc">|&gt;</span> </span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span> (<span class="at">title =</span> <span class="st">&quot;Utility Integrity Assessment- Mean scores per principle&quot;</span>) <span class="sc">|&gt;</span> </span>
@@ -3104,7 +3180,9 @@ Figure 1: Integrity assessment completeness by input method (online/offline)
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_allprinciple5 =</span> <span class="st">&quot;Principle 5 - Monitoring&quot;</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">fmt_number</span>(</span>
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">columns =</span> <span class="fu">everything</span>(), </span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">decimals =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">decimals =</span> <span class="dv">2</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>      )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div id="tbl-principle-overview" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-principle-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -3112,20 +3190,20 @@ Table 2: Utility Integrity Assessment- Mean scores per principle
 </figcaption>
 <div aria-describedby="tbl-principle-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="wxdnyekgam" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wxdnyekgam table {
+<div id="ydedfhptjo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ydedfhptjo table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#wxdnyekgam thead, #wxdnyekgam tbody, #wxdnyekgam tfoot, #wxdnyekgam tr, #wxdnyekgam td, #wxdnyekgam th {
+#ydedfhptjo thead, #ydedfhptjo tbody, #ydedfhptjo tfoot, #ydedfhptjo tr, #ydedfhptjo td, #ydedfhptjo th {
 border-style: none;
 }
-#wxdnyekgam p {
+#ydedfhptjo p {
 margin: 0;
 padding: 0;
 }
-#wxdnyekgam .gt_table {
+#ydedfhptjo .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -3150,11 +3228,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#wxdnyekgam .gt_caption {
+#ydedfhptjo .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#wxdnyekgam .gt_title {
+#ydedfhptjo .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -3165,7 +3243,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#wxdnyekgam .gt_subtitle {
+#ydedfhptjo .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -3176,7 +3254,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#wxdnyekgam .gt_heading {
+#ydedfhptjo .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -3187,12 +3265,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#wxdnyekgam .gt_bottom_border {
+#ydedfhptjo .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#wxdnyekgam .gt_col_headings {
+#ydedfhptjo .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -3206,7 +3284,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#wxdnyekgam .gt_col_heading {
+#ydedfhptjo .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3225,7 +3303,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#wxdnyekgam .gt_column_spanner_outer {
+#ydedfhptjo .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3236,13 +3314,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#wxdnyekgam .gt_column_spanner_outer:first-child {
+#ydedfhptjo .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#wxdnyekgam .gt_column_spanner_outer:last-child {
+#ydedfhptjo .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#wxdnyekgam .gt_column_spanner {
+#ydedfhptjo .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -3253,10 +3331,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#wxdnyekgam .gt_spanner_row {
+#ydedfhptjo .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#wxdnyekgam .gt_group_heading {
+#ydedfhptjo .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3281,7 +3359,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#wxdnyekgam .gt_empty_group_heading {
+#ydedfhptjo .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -3295,13 +3373,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#wxdnyekgam .gt_from_md > :first-child {
+#ydedfhptjo .gt_from_md > :first-child {
 margin-top: 0;
 }
-#wxdnyekgam .gt_from_md > :last-child {
+#ydedfhptjo .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#wxdnyekgam .gt_row {
+#ydedfhptjo .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3319,7 +3397,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#wxdnyekgam .gt_stub {
+#ydedfhptjo .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3331,7 +3409,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wxdnyekgam .gt_stub_row_group {
+#ydedfhptjo .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3344,13 +3422,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#wxdnyekgam .gt_row_group_first td {
+#ydedfhptjo .gt_row_group_first td {
 border-top-width: 2px;
 }
-#wxdnyekgam .gt_row_group_first th {
+#ydedfhptjo .gt_row_group_first th {
 border-top-width: 2px;
 }
-#wxdnyekgam .gt_summary_row {
+#ydedfhptjo .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3359,14 +3437,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wxdnyekgam .gt_first_summary_row {
+#ydedfhptjo .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#wxdnyekgam .gt_first_summary_row.thick {
+#ydedfhptjo .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#wxdnyekgam .gt_last_summary_row {
+#ydedfhptjo .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3375,7 +3453,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#wxdnyekgam .gt_grand_summary_row {
+#ydedfhptjo .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3384,7 +3462,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wxdnyekgam .gt_first_grand_summary_row {
+#ydedfhptjo .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3393,7 +3471,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#wxdnyekgam .gt_last_grand_summary_row_top {
+#ydedfhptjo .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3402,10 +3480,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#wxdnyekgam .gt_striped {
+#ydedfhptjo .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#wxdnyekgam .gt_table_body {
+#ydedfhptjo .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -3413,7 +3491,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#wxdnyekgam .gt_footnotes {
+#ydedfhptjo .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3426,7 +3504,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#wxdnyekgam .gt_footnote {
+#ydedfhptjo .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -3434,7 +3512,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wxdnyekgam .gt_sourcenotes {
+#ydedfhptjo .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3447,64 +3525,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#wxdnyekgam .gt_sourcenote {
+#ydedfhptjo .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#wxdnyekgam .gt_left {
+#ydedfhptjo .gt_left {
 text-align: left;
 }
-#wxdnyekgam .gt_center {
+#ydedfhptjo .gt_center {
 text-align: center;
 }
-#wxdnyekgam .gt_right {
+#ydedfhptjo .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#wxdnyekgam .gt_font_normal {
+#ydedfhptjo .gt_font_normal {
 font-weight: normal;
 }
-#wxdnyekgam .gt_font_bold {
+#ydedfhptjo .gt_font_bold {
 font-weight: bold;
 }
-#wxdnyekgam .gt_font_italic {
+#ydedfhptjo .gt_font_italic {
 font-style: italic;
 }
-#wxdnyekgam .gt_super {
+#ydedfhptjo .gt_super {
 font-size: 65%;
 }
-#wxdnyekgam .gt_footnote_marks {
+#ydedfhptjo .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#wxdnyekgam .gt_asterisk {
+#ydedfhptjo .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#wxdnyekgam .gt_indent_1 {
+#ydedfhptjo .gt_indent_1 {
 text-indent: 5px;
 }
-#wxdnyekgam .gt_indent_2 {
+#ydedfhptjo .gt_indent_2 {
 text-indent: 10px;
 }
-#wxdnyekgam .gt_indent_3 {
+#ydedfhptjo .gt_indent_3 {
 text-indent: 15px;
 }
-#wxdnyekgam .gt_indent_4 {
+#ydedfhptjo .gt_indent_4 {
 text-indent: 20px;
 }
-#wxdnyekgam .gt_indent_5 {
+#ydedfhptjo .gt_indent_5 {
 text-indent: 25px;
 }
-#wxdnyekgam .katex-display {
+#ydedfhptjo .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#wxdnyekgam div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ydedfhptjo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -3540,6 +3618,8 @@ height: 0px !important;
 </div>
 </div>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>score_overview <span class="sc">|&gt;</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">&quot;Utility Integrity Assessment: Scores per indicator&quot;</span>) <span class="sc">|&gt;</span></span>
@@ -3550,7 +3630,9 @@ height: 0px !important;
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>               ) <span class="sc">|&gt;</span> </span>
 <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fmt_number</span>(</span>
 <span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">columns =</span> <span class="fu">everything</span>(), </span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">decimals =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">decimals =</span> <span class="dv">2</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>      )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div id="tbl-score-overview" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-score-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -3558,20 +3640,20 @@ Table 3: Utility Integrity Assessment: Scores per indicator
 </figcaption>
 <div aria-describedby="tbl-score-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="cokjpyjnut" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cokjpyjnut table {
+<div id="xrcntbrzyv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xrcntbrzyv table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#cokjpyjnut thead, #cokjpyjnut tbody, #cokjpyjnut tfoot, #cokjpyjnut tr, #cokjpyjnut td, #cokjpyjnut th {
+#xrcntbrzyv thead, #xrcntbrzyv tbody, #xrcntbrzyv tfoot, #xrcntbrzyv tr, #xrcntbrzyv td, #xrcntbrzyv th {
 border-style: none;
 }
-#cokjpyjnut p {
+#xrcntbrzyv p {
 margin: 0;
 padding: 0;
 }
-#cokjpyjnut .gt_table {
+#xrcntbrzyv .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -3596,11 +3678,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#cokjpyjnut .gt_caption {
+#xrcntbrzyv .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#cokjpyjnut .gt_title {
+#xrcntbrzyv .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -3611,7 +3693,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#cokjpyjnut .gt_subtitle {
+#xrcntbrzyv .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -3622,7 +3704,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#cokjpyjnut .gt_heading {
+#xrcntbrzyv .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -3633,12 +3715,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#cokjpyjnut .gt_bottom_border {
+#xrcntbrzyv .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#cokjpyjnut .gt_col_headings {
+#xrcntbrzyv .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -3652,7 +3734,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#cokjpyjnut .gt_col_heading {
+#xrcntbrzyv .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3671,7 +3753,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#cokjpyjnut .gt_column_spanner_outer {
+#xrcntbrzyv .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3682,13 +3764,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#cokjpyjnut .gt_column_spanner_outer:first-child {
+#xrcntbrzyv .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#cokjpyjnut .gt_column_spanner_outer:last-child {
+#xrcntbrzyv .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#cokjpyjnut .gt_column_spanner {
+#xrcntbrzyv .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -3699,10 +3781,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#cokjpyjnut .gt_spanner_row {
+#xrcntbrzyv .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#cokjpyjnut .gt_group_heading {
+#xrcntbrzyv .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3727,7 +3809,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#cokjpyjnut .gt_empty_group_heading {
+#xrcntbrzyv .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -3741,13 +3823,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#cokjpyjnut .gt_from_md > :first-child {
+#xrcntbrzyv .gt_from_md > :first-child {
 margin-top: 0;
 }
-#cokjpyjnut .gt_from_md > :last-child {
+#xrcntbrzyv .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#cokjpyjnut .gt_row {
+#xrcntbrzyv .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3765,7 +3847,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#cokjpyjnut .gt_stub {
+#xrcntbrzyv .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3777,7 +3859,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#cokjpyjnut .gt_stub_row_group {
+#xrcntbrzyv .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3790,13 +3872,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#cokjpyjnut .gt_row_group_first td {
+#xrcntbrzyv .gt_row_group_first td {
 border-top-width: 2px;
 }
-#cokjpyjnut .gt_row_group_first th {
+#xrcntbrzyv .gt_row_group_first th {
 border-top-width: 2px;
 }
-#cokjpyjnut .gt_summary_row {
+#xrcntbrzyv .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3805,14 +3887,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#cokjpyjnut .gt_first_summary_row {
+#xrcntbrzyv .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#cokjpyjnut .gt_first_summary_row.thick {
+#xrcntbrzyv .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#cokjpyjnut .gt_last_summary_row {
+#xrcntbrzyv .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3821,7 +3903,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#cokjpyjnut .gt_grand_summary_row {
+#xrcntbrzyv .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3830,7 +3912,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#cokjpyjnut .gt_first_grand_summary_row {
+#xrcntbrzyv .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3839,7 +3921,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#cokjpyjnut .gt_last_grand_summary_row_top {
+#xrcntbrzyv .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3848,10 +3930,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#cokjpyjnut .gt_striped {
+#xrcntbrzyv .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#cokjpyjnut .gt_table_body {
+#xrcntbrzyv .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -3859,7 +3941,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#cokjpyjnut .gt_footnotes {
+#xrcntbrzyv .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3872,7 +3954,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#cokjpyjnut .gt_footnote {
+#xrcntbrzyv .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -3880,7 +3962,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#cokjpyjnut .gt_sourcenotes {
+#xrcntbrzyv .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3893,64 +3975,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#cokjpyjnut .gt_sourcenote {
+#xrcntbrzyv .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#cokjpyjnut .gt_left {
+#xrcntbrzyv .gt_left {
 text-align: left;
 }
-#cokjpyjnut .gt_center {
+#xrcntbrzyv .gt_center {
 text-align: center;
 }
-#cokjpyjnut .gt_right {
+#xrcntbrzyv .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#cokjpyjnut .gt_font_normal {
+#xrcntbrzyv .gt_font_normal {
 font-weight: normal;
 }
-#cokjpyjnut .gt_font_bold {
+#xrcntbrzyv .gt_font_bold {
 font-weight: bold;
 }
-#cokjpyjnut .gt_font_italic {
+#xrcntbrzyv .gt_font_italic {
 font-style: italic;
 }
-#cokjpyjnut .gt_super {
+#xrcntbrzyv .gt_super {
 font-size: 65%;
 }
-#cokjpyjnut .gt_footnote_marks {
+#xrcntbrzyv .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#cokjpyjnut .gt_asterisk {
+#xrcntbrzyv .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#cokjpyjnut .gt_indent_1 {
+#xrcntbrzyv .gt_indent_1 {
 text-indent: 5px;
 }
-#cokjpyjnut .gt_indent_2 {
+#xrcntbrzyv .gt_indent_2 {
 text-indent: 10px;
 }
-#cokjpyjnut .gt_indent_3 {
+#xrcntbrzyv .gt_indent_3 {
 text-indent: 15px;
 }
-#cokjpyjnut .gt_indent_4 {
+#xrcntbrzyv .gt_indent_4 {
 text-indent: 20px;
 }
-#cokjpyjnut .gt_indent_5 {
+#xrcntbrzyv .gt_indent_5 {
 text-indent: 25px;
 }
-#cokjpyjnut .katex-display {
+#xrcntbrzyv .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#cokjpyjnut div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xrcntbrzyv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -4115,8 +4197,10 @@ height: 0px !important;
 </section>
 <section id="impact-of-anonymity" class="level2">
 <h2 class="anchored" data-anchor-id="impact-of-anonymity">Impact of anonymity</h2>
-<p><a href="#fig-score-comp-anon" class="quarto-xref">Figure 2</a> shows the mean scores per principle for all respondents and indicates, with dots, the impact of anonymity on mean scores. Unknown respondents appear to have assessed themselves more severely across all indicators except indicators IRM3.1 (on control of conflict of interest), IRM 3.2 (on whistleblower protection), IRM5.1 (on integrity risk monitoring), and IRM5.2 (on review of integrity risk management function and processes)</p>
+<p><a href="#fig-score-comp-anon" class="quarto-xref">Figure 2</a> shows the mean scores per principle for all respondents and indicates, with dots, the impact of anonymity on mean scores. Unknown respondents appear to have assessed themselves more severely across all indicators except indicators IRM3.1 (on control of conflicts of interest), IRM 3.2 (on whistleblower protection), IRM5.1 (on integrity risk monitoring), and IRM5.2 (on review of integrity risk management function and processes)</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(score_overview, <span class="fu">aes</span>(</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> indicator,</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_scores)) <span class="sc">+</span></span>
@@ -4128,7 +4212,9 @@ height: 0px !important;
 <span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Mean scores&quot;</span>, </span>
 <span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Data anonymity&quot;</span>) <span class="sc">+</span></span>
 <span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">80</span>, <span class="at">hjust =</span> <span class="fl">0.8</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">80</span>, <span class="at">hjust =</span> <span class="fl">0.8</span>)</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>        )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output-display">
 <div id="fig-score-comp-anon" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -4145,8 +4231,11 @@ Figure 2: Mean scores across integrity assessment indicators, with comparison o
 </section>
 <section id="impact-of-input-method-support-and-survey-validation" class="level2">
 <h2 class="anchored" data-anchor-id="impact-of-input-method-support-and-survey-validation">Impact of input method, support and survey validation</h2>
-<p><a href="#fig-score-comp-source" class="quarto-xref">Figure 3</a> shows the differences between scores of known utilities that responded online and those of known utilities that responded offline, received some support, briefly justified their responses, and had their responses reviewed and commented on. There is marked difference between scores. Offline, verified scores are significantly lower than online scores, except for indicator IRM5.3 on responsiveness to external accountability mechanisms. The difference is most pronounced for indicators IRM5.2 on review of integrity risk management function and processes, IRM3.1 on control of conflicts of interest, and IRM3.2 on whistleblowing. The validation process does therefore have an impact though it is possible that some of the differences in scores could also be tied to regional differences and different regulatory requirements on service providers (regional distribution is not the same across online and offline responses).</p>
+<p><a href="#fig-score-comp-source" class="quarto-xref">Figure 3</a> shows the differences between scores of known utilities that responded online and those of known utilities that responded offline, received some support, briefly justified their responses, and had their responses reviewed and commented on.</p>
+<p>There is marked difference between scores. Offline, verified scores are significantly lower than online scores, except for indicator IRM5.3 on responsiveness to external accountability mechanisms. The difference is most pronounced for indicators IRM5.2 on review of integrity risk management function and processes, IRM3.1 on control of conflicts of interest, and IRM3.2 on whistleblowing. The validation process does therefore have an impact though it is possible that some of the differences in scores could also be tied to regional differences and different regulatory requirements on service providers (regional distribution is not the same across online and offline responses).</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(score_overview_filtered_source, <span class="fu">aes</span>(</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> indicator,</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_scores, </span>
@@ -4159,6 +4248,7 @@ Figure 2: Mean scores across integrity assessment indicators, with comparison o
 <span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">80</span>, <span class="at">hjust =</span> <span class="fl">0.8</span>)</span>
 <span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>        )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output-display">
 <div id="fig-score-comp-source" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -4175,8 +4265,11 @@ Figure 3: Comparison of mean scores across integrity assessment indicators from
 </section>
 <section id="regional-variations" class="level2">
 <h2 class="anchored" data-anchor-id="regional-variations">Regional variations</h2>
-<p><a href="#fig-score-comp-region" class="quarto-xref">Figure 4</a> shows mean scores of all known utilities and how these scores differ for utilities grouped by region. It is to be noted that some regions are not represented as widely as others. Utilities in Western Europe appear to have somewhat higher scores on many indicators but other scores are quite mixed. The main differences can possibly be explained by different policy environments and legal status for service providers and different regulatory requirements. However, as shown in <a href="#tbl-score-region" class="quarto-xref">Table 4</a>, there is still significant spread in the data for utilities within a region. Other factors, including different dates of establishment of formal service provision in a country, size of surveyed utilities, or other more local context factors could also influence the regional trends. These require further exploration.</p>
+<p><a href="#fig-score-comp-region" class="quarto-xref">Figure 4</a> shows mean scores of all known utilities and how these scores differ for utilities grouped by region. It is to be noted that some regions are not represented as widely as others. Utilities in Western Europe appear to have somewhat higher scores on many indicators but other scores are quite mixed. The main differences can possibly be explained by different policy environments and legal status for service providers, or different regulatory requirements.</p>
+<p>However, as shown in <a href="#tbl-score-region" class="quarto-xref">Table 4</a>, there is still significant spread in the data for utilities within a region. This suggests other factors, including possibly different dates of establishment of formal service provision in a country, size of surveyed utilities, or other more local context factors could also be influencing the regional trends. These require further exploration.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(score_overview_filtered, <span class="fu">aes</span>(</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> indicator,</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_scores)) <span class="sc">+</span></span>
@@ -4190,7 +4283,9 @@ Figure 3: Comparison of mean scores across integrity assessment indicators from
 <span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Mean scores&quot;</span>, </span>
 <span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Region&quot;</span>) <span class="sc">+</span></span>
 <span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">80</span>, <span class="at">hjust =</span> <span class="fl">0.8</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">80</span>, <span class="at">hjust =</span> <span class="fl">0.8</span>)</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>        )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output-display">
 <div id="fig-score-comp-region" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -4205,12 +4300,15 @@ Figure 4: Comparison of mean scores across integrity assessment indicators from
 </div>
 </div>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>ia_region_wide <span class="sc">|&gt;</span> </span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">&quot;Utility Integrity Assessment: Variation in regions&quot;</span>) <span class="sc">|&gt;</span></span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fmt_number</span>(</span>
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">columns =</span> <span class="fu">everything</span>(), </span>
 <span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">decimals =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div id="tbl-score-region" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-score-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -4218,20 +4316,20 @@ Table 4: Utility Integrity Assessment: Variation in regions
 </figcaption>
 <div aria-describedby="tbl-score-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="mfpykgzwbk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mfpykgzwbk table {
+<div id="lhuaisugok" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lhuaisugok table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#mfpykgzwbk thead, #mfpykgzwbk tbody, #mfpykgzwbk tfoot, #mfpykgzwbk tr, #mfpykgzwbk td, #mfpykgzwbk th {
+#lhuaisugok thead, #lhuaisugok tbody, #lhuaisugok tfoot, #lhuaisugok tr, #lhuaisugok td, #lhuaisugok th {
 border-style: none;
 }
-#mfpykgzwbk p {
+#lhuaisugok p {
 margin: 0;
 padding: 0;
 }
-#mfpykgzwbk .gt_table {
+#lhuaisugok .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -4256,11 +4354,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#mfpykgzwbk .gt_caption {
+#lhuaisugok .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#mfpykgzwbk .gt_title {
+#lhuaisugok .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -4271,7 +4369,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#mfpykgzwbk .gt_subtitle {
+#lhuaisugok .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -4282,7 +4380,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#mfpykgzwbk .gt_heading {
+#lhuaisugok .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -4293,12 +4391,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#mfpykgzwbk .gt_bottom_border {
+#lhuaisugok .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#mfpykgzwbk .gt_col_headings {
+#lhuaisugok .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -4312,7 +4410,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#mfpykgzwbk .gt_col_heading {
+#lhuaisugok .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4331,7 +4429,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#mfpykgzwbk .gt_column_spanner_outer {
+#lhuaisugok .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4342,13 +4440,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#mfpykgzwbk .gt_column_spanner_outer:first-child {
+#lhuaisugok .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#mfpykgzwbk .gt_column_spanner_outer:last-child {
+#lhuaisugok .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#mfpykgzwbk .gt_column_spanner {
+#lhuaisugok .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -4359,10 +4457,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#mfpykgzwbk .gt_spanner_row {
+#lhuaisugok .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#mfpykgzwbk .gt_group_heading {
+#lhuaisugok .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4387,7 +4485,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#mfpykgzwbk .gt_empty_group_heading {
+#lhuaisugok .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -4401,13 +4499,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#mfpykgzwbk .gt_from_md > :first-child {
+#lhuaisugok .gt_from_md > :first-child {
 margin-top: 0;
 }
-#mfpykgzwbk .gt_from_md > :last-child {
+#lhuaisugok .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#mfpykgzwbk .gt_row {
+#lhuaisugok .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4425,7 +4523,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#mfpykgzwbk .gt_stub {
+#lhuaisugok .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4437,7 +4535,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#mfpykgzwbk .gt_stub_row_group {
+#lhuaisugok .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -4450,13 +4548,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#mfpykgzwbk .gt_row_group_first td {
+#lhuaisugok .gt_row_group_first td {
 border-top-width: 2px;
 }
-#mfpykgzwbk .gt_row_group_first th {
+#lhuaisugok .gt_row_group_first th {
 border-top-width: 2px;
 }
-#mfpykgzwbk .gt_summary_row {
+#lhuaisugok .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -4465,14 +4563,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#mfpykgzwbk .gt_first_summary_row {
+#lhuaisugok .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#mfpykgzwbk .gt_first_summary_row.thick {
+#lhuaisugok .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#mfpykgzwbk .gt_last_summary_row {
+#lhuaisugok .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4481,7 +4579,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#mfpykgzwbk .gt_grand_summary_row {
+#lhuaisugok .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -4490,7 +4588,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#mfpykgzwbk .gt_first_grand_summary_row {
+#lhuaisugok .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4499,7 +4597,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#mfpykgzwbk .gt_last_grand_summary_row_top {
+#lhuaisugok .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -4508,10 +4606,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#mfpykgzwbk .gt_striped {
+#lhuaisugok .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#mfpykgzwbk .gt_table_body {
+#lhuaisugok .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -4519,7 +4617,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#mfpykgzwbk .gt_footnotes {
+#lhuaisugok .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -4532,7 +4630,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#mfpykgzwbk .gt_footnote {
+#lhuaisugok .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -4540,7 +4638,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#mfpykgzwbk .gt_sourcenotes {
+#lhuaisugok .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -4553,64 +4651,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#mfpykgzwbk .gt_sourcenote {
+#lhuaisugok .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#mfpykgzwbk .gt_left {
+#lhuaisugok .gt_left {
 text-align: left;
 }
-#mfpykgzwbk .gt_center {
+#lhuaisugok .gt_center {
 text-align: center;
 }
-#mfpykgzwbk .gt_right {
+#lhuaisugok .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#mfpykgzwbk .gt_font_normal {
+#lhuaisugok .gt_font_normal {
 font-weight: normal;
 }
-#mfpykgzwbk .gt_font_bold {
+#lhuaisugok .gt_font_bold {
 font-weight: bold;
 }
-#mfpykgzwbk .gt_font_italic {
+#lhuaisugok .gt_font_italic {
 font-style: italic;
 }
-#mfpykgzwbk .gt_super {
+#lhuaisugok .gt_super {
 font-size: 65%;
 }
-#mfpykgzwbk .gt_footnote_marks {
+#lhuaisugok .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#mfpykgzwbk .gt_asterisk {
+#lhuaisugok .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#mfpykgzwbk .gt_indent_1 {
+#lhuaisugok .gt_indent_1 {
 text-indent: 5px;
 }
-#mfpykgzwbk .gt_indent_2 {
+#lhuaisugok .gt_indent_2 {
 text-indent: 10px;
 }
-#mfpykgzwbk .gt_indent_3 {
+#lhuaisugok .gt_indent_3 {
 text-indent: 15px;
 }
-#mfpykgzwbk .gt_indent_4 {
+#lhuaisugok .gt_indent_4 {
 text-indent: 20px;
 }
-#mfpykgzwbk .gt_indent_5 {
+#lhuaisugok .gt_indent_5 {
 text-indent: 25px;
 }
-#mfpykgzwbk .katex-display {
+#lhuaisugok .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#mfpykgzwbk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lhuaisugok div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -4776,14 +4874,37 @@ height: 0px !important;
 </section>
 <section id="conclusions" class="level1">
 <h1>Conclusions</h1>
-<p>The data from Integrity Assessments is still too limited to confirm decisive trends in integrity management practices of water and sanitation service providers. It does still suggest that integrity management practices could be improved, especially to mitigate conflicts of interest and protect whistleblowers. Many organisational and sector anti-corruption processes focus on procurement control. This is an important area of risk though it is not the weakest management area and some progress appears to already have been made.</p>
-<p>The completeness of responses, the spread of scores, and the spread of scores even within regions suggest the tool is able to capture practices that are influenced by the management of individual utilities, and not just broad contextual trends. The tool can thus provide important insight for utilities and possibly for regulatory authorities on paths for action to control some major integrity risks.</p>
+<ul>
+<li><p>The data from Utility Integrity Assessments is still too limited to confirm decisive trends in integrity management practices of water and sanitation service providers. However, the data does still suggest that integrity management practices could be improved, especially to mitigate conflicts of interest, take action against non-compliant contractors, and protect whistleblowers.</p></li>
+<li><p>Many organisational and sector anti-corruption processes focus on procurement control. This is an important area of risk though it is not the weakest management area and some progress appears to already have been made.</p></li>
+<li><p>The completeness of responses, the spread of scores, and the spread of scores even within regions suggest the tool is able to capture practices that are influenced by the management of individual utilities, and not just broad contextual trends. The tool can thus provide important insight for utility managers (and for regulatory authorities) looking to mitigate corruption and integrity risks and in this way strengthen performance and contribute to achieving SDG6.</p></li>
+</ul>
 </section>
-<section id="references" class="level1">
-<h1>References</h1>
+<section id="references" class="level1 unnumbered">
+
+
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-IDB2024" class="csl-entry" role="listitem">
+Acuña Mantilla, K., &amp; Vergara Stuardo, J. (2024). <em><span>Poner manos a la obra con la integridad: herramientas para evaluar, gestionar y fortalecer la integridad en organizaciones del sector de agua y saneamiento en América Latina y el Caribe</span></em>. Inter-American Development Bank. <a href="https://doi.org/10.18235/0012895">https://doi.org/10.18235/0012895</a>
+</div>
+<div id="ref-avello2023" class="csl-entry" role="listitem">
+Avello, P., Allakulov, U., Barreto-Dillon, L., Das, B., Hermann-Friede, J., Hubendick, L., Feuerstein, L., &amp; Jiménez Fdez de Palencia, A. (2023). The integrity management toolbox in action: A study of 22 urban water service cases. <em>Journal of Water, Sanitation and Hygiene for Development</em>, <em>13</em>(12), 952–961. <a href="https://doi.org/10.2166/washdev.2023.137">https://doi.org/10.2166/washdev.2023.137</a>
+</div>
+<div id="ref-barreto2018" class="csl-entry" role="listitem">
+Barreto-Dillon, L., Basani, M., Simone, F. D., &amp; Cotlear, B. (2018). <span>Transparencia: Impulsando eficiencia en empresas proveedoras de servicios de agua y saneamiento: Buenas prácticas en cuatro empresas de América Latina</span>. <em>IDB Publications</em>. <a href="https://doi.org/10.18235/0001114">https://doi.org/10.18235/0001114</a>
+</div>
+<div id="ref-bhatt2024" class="csl-entry" role="listitem">
+Bhatt, J. D. (2024). <em>The <span>Politics</span> of <span>Performance Benchmarking</span> in <span>Urban Water Supply</span>: <span>Sacrificing Equity</span> on the <span>Altar</span> of <span>Efficiency</span></em>. <em>17</em>(2).
+</div>
+<div id="ref-cubillo2022" class="csl-entry" role="listitem">
+Cubillo, F., Allakulov, U., Patiño Piñeros, D., &amp; Basani, M. (2022). <span>Análisis focalizado: Integridad empresarial en empresas prestadoras de servicios de agua y saneamiento</span>. <em>IDB Publications</em>. <a href="https://doi.org/10.18235/0004230">https://doi.org/10.18235/0004230</a>
+</div>
+<div id="ref-wigo2" class="csl-entry" role="listitem">
+Water Integrity Network (WIN). (2021). <em>Water <span>Integrity Global Outlook</span> 2021: <span>Water Integrity</span> in <span>Urban Water</span> and <span>Sanitation</span></em> (2). WIN.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

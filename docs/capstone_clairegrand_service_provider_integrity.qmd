@@ -1,9 +1,13 @@
 ---
 title: "Integrity Practices of Global Water Service Providers"
 subtitle: "A Review of Utility Integrity Assessment Data"
-author: "Claire Grandadam"
-affiliation: "Water Integrity Network"
 date: "January 31, 2026"
+author:
+  - name: Claire Grandadam
+    orcid: 0009-0003-3841-2297
+    affiliation: 
+      - name: Water Integrity Network
+        url: https://www.waterintegritynetwork.net
 format:
   html:
     embed-resources: true
@@ -12,10 +16,9 @@ format:
     toc-depth: 2
     toc-title: "Contents"
 bibliography: bibliography.bib
+csl: apa.csl
 execute:
   warning: false
-editor_options:
-  chunk_output_type: console
 editor: 
   markdown: 
     wrap: 72
@@ -32,7 +35,7 @@ performance, particularly from service provider managers, policy-makers,
 regulators, banks and other funders, as well as sector analysts.
 
 National and global utility benchmarking processes have been used widely
-for such analysis, to assess the way service providers operate, and to
+for such analyses, to assess the way service providers operate, and to
 orient sector reforms. The most common benchmarking tools tend to focus
 on service quality, financial management, and operational efficiency.
 Recently, water sector utility benchmarking tools have also been
@@ -41,20 +44,20 @@ evolving in part in response to two developments:
 -   First, the recognition that performance is affected by governance
     issues and corruption, and the related evidence that anti-corruption
     and integrity management can support utility performance
-    (Barreto-Dillon, et al., 2018; WIN, 2021; IDB, 2024). There is a
-    need for better tools that can support service providers striving
-    for integrity, equity, sustainability, and resilience.
+    [@barreto2018; @wigo2; @IDB2024]. There is a need for better tools
+    that can support service providers striving for integrity, equity,
+    sustainability, and resilience.
 
 -   Second, growing criticism of the limits and bias in major utility
     benchmarking tools that have primarily focused on efficiency, to the
-    detriment of distributional equity (Bhatt, 2024).
+    detriment of distributional equity [@bhatt2024].
 
 Major utility benchmarking tools such as Aquarating and NewIBnet
 recently introduced new process indicators focusing on management
-practices (in 2022 and 2023 respectively). There is however limited data
-available on their use. The Water Integrity Network (WIN) also developed
-a set of indicators to assess integrity management practices of service
-providers.
+practices (in 2022 and 2023 respectively) [@cubillo2022]. There is
+however limited data available on their use. The Water Integrity Network
+(WIN) also developed a set of indicators in 2018, to assess integrity
+management practices of service providers.
 
 This analysis aims to examine anonymised data from applications of the
 Water Integrity Network tool since 2018, to asses the tool's relevance
@@ -72,21 +75,20 @@ It is part of WIN's InWASH integrity management toolbox for water and
 sanitation service providers, an intensive process for prioritising and
 managing the integrity risks service providers face in their daily
 operations (a process which can also be run without the Utility
-Integrity Assessment). The tool is also available separately as an
-online survey at <https://www.waterintegritynetwork.net/inwash>.
+Integrity Assessment). The tool is also freely available separately as
+an online survey at <https://www.waterintegritynetwork.net/inwash>.
 
-Early pilots and assessment by WIN indicated that there are patterns in
+Early pilots and analyses by WIN indicated that there are patterns in
 how good governance and integrity practices are implemented in
 organisations in the water and sanitation sectors globally and that
-benchmarking can be useful for urban service providers of a certain size
-(very small rural service providers tend to not yet have the capacity
-and systems for the governance practices described in the tool). This is
-the case even though local context and the local regulatory environment
-of course influence which governance and integrity practices are
-possible and effective for different utilities.
+benchmarking can be useful for urban service providers of a certain
+size. This is the case even though local context and the local
+regulatory environment of course influence which governance and
+integrity practices are possible and effective for different utilities.
 
-The Utility Integrity Assessment was designed as a short survey
-examining 15 indicators categorised under 5 integrity principles:
+Based on these observations, the Utility Integrity Assessment was
+designed as a short survey examining 15 indicators categorised under 5
+integrity principles:
 
 1.  Tone at the top (with 2 indicators: on leadership and on codes of
     conduct);
@@ -145,21 +147,21 @@ similar document. The 5 possible scores are:
 This analysis looks at available data since 2018, from service providers
 that filled the survey online independently, and from service providers
 responding offline either as pilot users of the Utility Integrity
-Assesment or as part of an InWASH process, and in each of these two
-cases receiving support and validation from a WIN or partner expert or
-consultant.
+Assesment or as participants of an InWASH process. The offline
+respondents received some support to fill in the survey and had to
+provide some justification for the scores (a brief explanation or link
+to evidence). WIN or partner expert or consultant also read and
+validated the scores.
 
 The analysis looks at:
 
--   whether scores differ based on the type of utility, the way the the
-    survey was taken, or within utilities (over time or between
-    individual survey takers).
-
--   whether there is significant variation in the practices of service
-    providers across regions,
-
 -   whether there are clear trends, strengths, and weaknesses across
     indicators and principles,
+
+-   whether scores differ based on the way the the survey was taken,
+
+-   whether there is significant variation in the practices of service
+    providers across regions.
 
 ```{r  echo = TRUE}
 
@@ -226,12 +228,14 @@ ia_data <- ia_data |> mutate(status = case_when(
 
 Most respondents were able to complete the survey (over 70%). This could
 indicate that the indicators are generally well understood and relevant
-for different service providers. There are many possible reasons for not
-completing the survey but it possible that there are still categories of
-service providers for whom the indicators are not easy to follow,
-relevant, or applicable in their context. WIN indicates utility size is
-most likely a factor in how relevant the survey is. This could not be
-confirmed, nor could a threshold be specified with this data.
+for different service providers.
+
+There are many possible reasons for not completing the survey, but it is
+possible that there are still categories of service providers for whom
+the indicators are not easy to follow, relevant, or applicable in their
+context. WIN indicates utility size is most likely a factor in how
+relevant the survey is. This could not be confirmed, nor could a
+threshold be specified with this data.
 
 @fig-completeness shows that all respondents using the offline tool
 (with support or some validation) completed the survey in full and
@@ -416,18 +420,20 @@ contractors for non-compliance).
 
 These findings contrast somewhat with analyses of results of other
 integrity management processes where service providers have identified
-integrity *risks*, in particular risks related to operations and
-customer relations. REF Indeed, service providers are rating themselves
-relatively highly even in areas where they are still perceving high
-risks, most clearly in how they interact with customers. The disconnect
-may be linked to regional variations not captured in previous integrity
-risk management process analyses, or it could indicate that the
-practices described in the highest level of indicator IRM3.6 are not
-ambitious enough to mitigate significant risk, or that some utilities
-misjudge the scale and effectiveness of their feedback and participation
-practices. A weakness of the Utility Integrity Assessment is that it
-provides only limited insight on practices to mitigate operational
-risks, even though these are perceived as high.
+the integrity *risks* they face, in particular risks related to
+operations and customer relations [@avello2023]. Indeed, this data shows
+service providers are rating themselves relatively highly even in areas
+where they are still perceiving high risks, most clearly in how they
+interact with customers. The disconnect may be linked to regional
+variations not captured in integrity risk management process analyses,
+or it could indicate that the practices described in the highest level
+of indicator IRM3.6 are not ambitious enough to mitigate significant
+risk, or that some utilities misjudge the scale and effectiveness of
+their feedback and participation practices.
+
+A weakness of the Utility Integrity Assessment is that it provides only
+limited insight on practices to mitigate integrity risks related to
+operations, even though these are perceived as high.
 
 ```{r}
 #| label: tbl-principle-overview
@@ -472,8 +478,8 @@ score_overview |>
 respondents and indicates, with dots, the impact of anonymity on mean
 scores. Unknown respondents appear to have assessed themselves more
 severely across all indicators except indicators IRM3.1 (on control of
-conflict of interest), IRM 3.2 (on whistleblower protection), IRM5.1 (on
-integrity risk monitoring), and IRM5.2 (on review of integrity risk
+conflicts of interest), IRM 3.2 (on whistleblower protection), IRM5.1
+(on integrity risk monitoring), and IRM5.2 (on review of integrity risk
 management function and processes)
 
 ```{r}
@@ -500,8 +506,9 @@ ggplot(score_overview, aes(
 @fig-score-comp-source shows the differences between scores of known
 utilities that responded online and those of known utilities that
 responded offline, received some support, briefly justified their
-responses, and had their responses reviewed and commented on. There is
-marked difference between scores. Offline, verified scores are
+responses, and had their responses reviewed and commented on.
+
+There is marked difference between scores. Offline, verified scores are
 significantly lower than online scores, except for indicator IRM5.3 on
 responsiveness to external accountability mechanisms. The difference is
 most pronounced for indicators IRM5.2 on review of integrity risk
@@ -583,23 +590,24 @@ ia_region_wide |>
 
 # Conclusions
 
-The data from Integrity Assessments is still too limited to confirm
-decisive trends in integrity management practices of water and
-sanitation service providers. However, the data does still suggest that
-integrity management practices could be improved, especially to mitigate
-conflicts of interest, take action against non-compliant contractors,
-and protect whistleblowers.
+-   The data from Utility Integrity Assessments is still too limited to
+    confirm decisive trends in integrity management practices of water
+    and sanitation service providers. However, the data does still
+    suggest that integrity management practices could be improved,
+    especially to mitigate conflicts of interest, take action against
+    non-compliant contractors, and protect whistleblowers.
 
-Many organisational and sector anti-corruption processes focus on
-procurement control. This is an important area of risk though it is not
-the weakest management area and some progress appears to already have
-been made.
+-   Many organisational and sector anti-corruption processes focus on
+    procurement control. This is an important area of risk though it is
+    not the weakest management area and some progress appears to already
+    have been made.
 
-The completeness of responses, the spread of scores, and the spread of
-scores even within regions suggest the tool is able to capture practices
-that are influenced by the management of individual utilities, and not
-just broad contextual trends. The tool can thus provide important
-insight for utilities (and for regulatory authorities) on paths for
-action to control major integrity risks.
+-   The completeness of responses, the spread of scores, and the spread
+    of scores even within regions suggest the tool is able to capture
+    practices that are influenced by the management of individual
+    utilities, and not just broad contextual trends. The tool can thus
+    provide important insight for utility managers (and for regulatory
+    authorities) looking to mitigate corruption and integrity risks and
+    in this way strengthen performance and contribute to achieving SDG6.
 
 # References
