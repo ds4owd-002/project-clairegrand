@@ -1,15 +1,17 @@
 ---
-title: "Integrity practices of global water service providers"
-subtitle: "A review of InWASH integrity assessment data"
+title: "Integrity Practices of Global Water Service Providers"
+subtitle: "A Review of Utility Integrity Assessment Data"
 author: "Claire Grandadam"
 affiliation: "Water Integrity Network"
-date: "January 2026"
+date: "January 31, 2026"
 format:
   html:
     embed-resources: true
+    code-fold: true
     toc: true
-    toc-depth: 1
+    toc-depth: 2
     toc-title: "Contents"
+bibliography: bibliography.bib
 execute:
   warning: false
 editor_options:
@@ -460,7 +462,8 @@ score_overview |>
                ) |> 
     fmt_number(
       columns = everything(), 
-      decimals = 2)
+      decimals = 2
+      )
 ```
 
 ## Impact of anonymity
@@ -488,7 +491,8 @@ ggplot(score_overview, aes(
        y = "Mean scores", 
        color = "Data anonymity") +
   theme_minimal() +
-  theme(axis.text.x = element_text(angle = 80, hjust = 0.8))
+  theme(axis.text.x = element_text(angle = 80, hjust = 0.8)
+        )
 ```
 
 ## Impact of input method, support and survey validation
@@ -560,7 +564,8 @@ ggplot(score_overview_filtered, aes(
        y = "Mean scores", 
        color = "Region") +
   theme_minimal() +
-  theme(axis.text.x = element_text(angle = 80, hjust = 0.8))
+  theme(axis.text.x = element_text(angle = 80, hjust = 0.8)
+        )
 
 ```
 
