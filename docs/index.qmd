@@ -437,7 +437,7 @@ operations, even though these are perceived as high.
 
 ```{r}
 #| label: tbl-principle-overview
-#| tbl-cap: "Utility Integrity Assessment- Mean scores per principle"
+#| tbl-cap: "Mean assessment scores per principle"
 
 principle_overview |> 
   gt() |> 
@@ -456,7 +456,7 @@ principle_overview |>
 
 ```{r}
 #| label: tbl-score-overview
-#| tbl-cap: "Utility Integrity Assessment: Scores per indicator"
+#| tbl-cap: "Mean assessment scores per indicator"
 
 score_overview |>
     gt() |>
@@ -578,7 +578,7 @@ ggplot(score_overview_filtered, aes(
 
 ```{r}
 #| label: tbl-score-region
-#| tbl-cap: "Utility Integrity Assessment: Variation in regions"
+#| tbl-cap: "Assessment score variation in regions"
 
 ia_region_wide |> 
     gt() |>
